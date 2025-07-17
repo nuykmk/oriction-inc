@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon"><!-- favicon -->
+  <!-- SEO対策 -->
+  <meta name="description" content="テキスト" /><!-- 実際のサイト説明文に置き換えてください -->
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://example.com/"> <!-- 実際のURLに置き換えてください -->
+  <!-- Twitterカード -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@nuykmk" />
+  <meta property="og:url" content="ページのURL" />
+  <meta property="og:title" content="ページのタイトル" />
+  <meta property="og:description" content="ページの説明文" />
+  <meta property="og:image" content="画像のURL" />
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cookie&family=Noto+Sans+JP:wght@100..900&family=Satisfy&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header" class="header">
+    <div class="header__inner layout-inner">
+      <button type="button" class="header__cta">
+        申し込む！
+        <span class="header__cta-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17">
+            <path fill="#ffffff" d="M0.005,16.052 L0.118,0.926 L13.113,8.391 L0.005,16.052 Z" />
+          </svg>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- FV -->
+  <section class="fv" id="fv">
+    <!-- ★ グラデ背景部分を wrap -->
+    <div class="fv__main-bg">
+      <div class="layout-padding fv__padding">
+        <div class="layout-inner fv__inner">
+          <!-- ピンク系のサブコピー群（まとめてアニメ） -->
+          <div class="fv__texts js-fade-sub-group">
+            <p class="fv__sub">
+              サブコピー1サブコピー2<span class="fv__sub-sm">です</span>
+            </p>
+            <p class="fv__sub2">
+              これ<span class="fv__sub-sm">は</span>サブコピー3サブコピー<span class="fv__sub-sm">なんです4</span>！
+            </p>
+          </div>
+
+          <!-- 本文テキスト（単体アニメ） -->
+          <p class="fv__lead js-fade-lead">
+            本文テキスト1本文テキスト2！ここは本文テキストなんです3！
+          </p>
+
+          <!-- タイトル（単体アニメ） -->
+          <h1 class="fv__title js-fade-title">
+            <span class="highlight-bg"><span class="gradient-text"> <span class="fv__title-lg">サンプル</span><span
+                  class="fv__title-sm">の</span> </span>
+            </span><br>
+            <span class="highlight-bg"><span class="gradient-text">テスト用サイトです。</span></span>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="fv__info">
+      <p class="fv__label">ダミー</p>
+      <p class="fv__date">0123<span class="fv__date-sm">年</span>0<span class="fv__date-sm">月</span>00<span
+          class="fv__date-sm">日(日)</span>00:00〜00:00</p>
+    </div>
+
+    <!-- CTAボタン -->
+    <button type="button" class="c-button c-button--cta" id="entry">
+      申し込む！
+      <span class="c-button__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" class="c-button__icon-bg">
+          <path fill="#fcfcfc"
+            d="M21.544,1.815 C32.411,1.815 41.220,10.623 41.220,21.492 C41.220,32.359 32.411,41.167 21.544,41.167 C10.677,41.167 1.867,32.359 1.867,21.492 C1.867,10.623 10.677,1.815 21.544,1.815 Z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" class="c-button__icon-arrow">
+          <path fill="#00bc85" d="M0.005,16.052 L0.118,0.926 L13.113,8.391 L0.005,16.052 Z" />
+        </svg>
+      </span>
+    </button>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="p-about js-parallax-trigger">
+    <!-- 背景画像（パララックス対象） -->
+    <div class="c-section-bg js-parallax-bg">
+      <img src="img/about-bg.webp" alt="Aboutイメージ" />
+    </div>
+
+
+
+    <!-- 内容ボックス -->
+    <div class="c-card-wrap js-fade-card js-parallax  u-relative">
+      <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
+      <h2 class="c-section-title js-parallax u-absolute-center">
+        <span class="c-section-title__text c-gradient-title js-split-text">About</span>
+      </h2>
+      <div class="c-card">
+
+        <!-- ボックス内タイトル（aboutセクション固有） -->
+        <p class="p-about__subtitle js-fade-sub js-parallax">
+          <span class="p-about__logo">ORICTON</span>とは？
+        </p>
+
+        <!-- 共通：キャッチコピー -->
+        <p class="p-about__label c-label js-fade-label js-parallax">
+          <span class="gradient-text">テスト用サンプルコピーが入るです！</span>
+        </p>
+
+        <!-- 共通：サブキャッチコピー -->
+        <p class="c-lead js-fade-lead js-parallax">ここは十月ことにこういう講演心としてものの後を立ち行かまいませ。</p>
+
+        <!-- 本文 -->
+        <div class="c-text js-fade-text js-parallax">
+          <p>
+            多分当時が説明院はけっしてその変化でたなどがほかならとしまいないのは入会行きたないて、さっそくには解るましんでん。秋刀魚から来だ事もあたかも今よりかつてしたいん。いよいよ嘉納さんから講演目的どうお尋ねがなるた詫この理論それか発見をというご持でたましんて、いわゆるほかはこれか金力会員がいるて、木下君ののが味の私にどうぞご満足と知れて私自己にご修養が引き離すようにとうていお戦争に持っますたて、もうまあ使用に解るでしょとならです事に握っですた。
+          </p>
+          <!-- <p>2段落目も必要ならここに。</p> -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Merit -->
+  <section class="p-merit js-parallax-trigger">
+    <!-- 背景画像（パララックス対象） -->
+    <div class="p-merit__bg c-section-bg js-parallax-bg">
+      <img src="img/merit-bg.webp" alt="meritイメージ" />
+    </div>
+    <!-- 内容ボックス -->
+    <div class="c-card-wrap js-fade-card js-parallax  u-relative">
+      <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
+      <h2 class="c-section-title js-parallax u-absolute-center">
+        <span class="c-section-title__text c-gradient-title js-split-text">Merit</span>
+      </h2>
+      <div class="c-card">
+        <!-- 共通：キャッチコピー -->
+        <p class="c-label js-fade-label js-parallax">
+          <span class="gradient-text">サンプルコピーだす！</span>
+        </p>
+        <!-- 本文 -->
+        <div class="c-text js-fade-text js-parallax">
+          <p>
+            包みは耳のかっこうゴーシュらへ扉で急い曲だまし。またとてもだめたですという楽長ましまし。生意気たたんたはなかっいやボロンボロンのくたくた汁のところがは時々上手じならながら、それだってあとのなるれんたで。 </p>
+          <p>こさえよすぎこれは東を長いたで前の川の楽器団が持っ第二窓目のきちに休んてくださいたます。ゴーシュも一生なおるててだ。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section class="p-schedule js-parallax-trigger">
+
+
+    <!-- 内容ボックス -->
+    <div class="p-schedule__layout c-card-wrap js-fade-card js-parallax  u-relative">
+      <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
+      <h2 class="c-section-title js-parallax u-absolute-center">
+        <span class="c-section-title__text c-gradient-title js-split-text">Schedule</span>
+      </h2>
+      <div class="c-card">
+
+        <!-- ボックス内タイトル（scheduleセクション固有） -->
+        <!-- <p class="p-schedule__subtitle js-fade-sub js-parallax">
+                <span class="p-schedule__logo">ORICTON</span>とは？
+              </p> -->
+
+        <!-- 共通：キャッチコピー -->
+        <p class="c-label js-fade-label js-parallax">
+          <span class="gradient-text">参加概要</span>
+        </p>
+
+        <!-- 共通：サブキャッチコピー -->
+        <!-- <p class="c-lead js-fade-lead js-parallax">ここは十月ことにこういう講演心としてものの後を立ち行かまいませ。</p> -->
+
+        <!-- 本文 -->
+        <div class="p-schedule__text">
+          <dl>
+            <dt><span class="icon-sm">◆</span>開催日時</dt>
+            <dd>
+              <p>2000789年6月21日（日）12:00～20:00</p>
+              <p class="text-sm">※終了時刻が前倒しになる可能性があります。詳細は、参加者に改めてご連絡いたします。</p>
+            </dd>
+
+            <dt><span class="icon-sm">◆</span>参加費</dt>
+            <dd>無料</dd>
+
+            <dt><span class="icon-sm">◆</span>お申込み方法</dt>
+            <dd>
+              本ページのお申込みボタンをクリックし、ORICTIONのサイトにてお申し込みください。
+            </dd>
+
+            <dt><span class="icon-sm">◆</span>当日必要なもの</dt>
+            <dd>夢、希望、愛</dd>
+          </dl>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 共通ライブラリ -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- このページ限定のJS-->
+
+  <!-- 共通のJS（全ページで使う） -->
+  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

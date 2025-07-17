@@ -1,0 +1,211 @@
+@use '../foundation/globals' as *;
+
+// ==============================
+// FV
+// ==============================
+.fv {
+  &__inner {
+    padding: $space-32 $space-80;
+
+    text-align: left;
+  }
+  &__main-bg {
+    background-image: $bg-fv;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+  // サブコピー群（ピンク文字）
+  &__texts {
+    margin-bottom: 1.56rem;
+
+    .fv__sub,
+    .fv__sub2 {
+      @include font($fs-36, $font-weight-black, $lh-default);
+      color: $pink-500;
+      text-align: left;
+      &-sm {
+        font-size: $fs-28;
+      }
+    }
+  }
+
+  // 本文テキスト
+  &__lead {
+    @include font($fs-24, $line-height: $lh-none);
+    text-align: left;
+    color: $text-default;
+    margin-bottom: 4.75rem;
+  }
+
+  // タイトル
+  &__title {
+    @include font($fs-56, $font-weight-black, $lh-tight);
+    text-align: left;
+    letter-spacing: $ls-wide;
+    margin-bottom: $space-80;
+
+    &-lg {
+      display: inline-block;
+      @include font($fs-72, $font-weight-black, $lh-none);
+    }
+
+    .gradient-text {
+      background: $gradient-title-sub;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 0 transparent);
+      -webkit-text-stroke: 0.3px transparent;
+      transform: translateZ(0);
+      overflow: visible;
+    }
+
+    .highlight-bg {
+      background-color: $bg-black;
+      display: inline-block;
+      padding: 0 $space-4;
+      overflow: visible;
+      margin-bottom: $space-20;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // info（ラベルやTEL）
+  &__info {
+    background-color: $bg-accent;
+    color: $text-white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10.625rem;
+    .fv__label {
+      @include font($fs-18, $font-weight-bold, $lh-none);
+      border: 2px solid $border-white;
+      padding: $space-10 $space-32;
+      margin: $space-10 $space-16;
+    }
+
+    .fv__date {
+      @include font($fs-24, $font-weight-bold, $lh-default);
+      &-sm {
+        @include font($fs-18);
+      }
+    }
+  }
+}
+
+// ==============================
+// About
+// ==============================
+
+.p-about {
+  position: relative;
+  padding-bottom: $space-104;
+  background: #fff;
+  overflow: hidden;
+
+  &__subtitle {
+    @include font($fs-32, $font-weight-regular, $lh-100);
+    margin-top: $space-40;
+    padding-bottom: $space-56;
+    color: $text-accent;
+    .p-about__logo {
+      @include font($fs-36, $font-weight-black);
+    }
+  }
+  &__label {
+    @include font($fs-26!important, $font-weight-bold, $lh-100);
+  }
+}
+
+// ==============================
+// Merit
+// ==============================
+.p-merit {
+  position: relative;
+  padding-bottom: $space-104;
+  background: $bg-default;
+  overflow: hidden;
+  .c-text {
+    text-align: left;
+  }
+
+  .p-merit__bg {
+    background-color: $blue-700;
+    img {
+      width: 56%;
+      margin: 0 auto;
+      display: block;
+
+      /* モダンブラウザ用マスク */
+      -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+      );
+      -webkit-mask-size: 100% 100%;
+      -webkit-mask-repeat: no-repeat;
+
+      mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+      );
+      mask-size: 100% 100%;
+      mask-repeat: no-repeat;
+    }
+  }
+}
+
+// ==============================
+// Schedule
+// ==============================
+
+.p-schedule {
+  position: relative;
+  // padding-bottom: $space-104;
+  background: $gradient-schedule-bg;
+  // background-color: black;
+  overflow: hidden;
+  .p-schedule__text {
+    text-align: left;
+  }
+
+  &__layout {
+    margin: $space-104 auto !important;
+  }
+
+  &__text {
+    @include font($fs-24, $font-weight-bold, $lh-100);
+
+    dt {
+      color: $text-accent;
+      display: flex;
+      align-items: center;
+      margin-bottom: $space-16;
+      .icon-sm {
+        font-size: $fs-14;
+        margin-right: $space-8;
+      }
+    }
+    dd {
+      @include font($fs-20, $font-weight-medium);
+      margin-bottom: $space-30;
+      p + p {
+        margin-top: $space-16;
+      }
+      .text-sm {
+        @include font($fs-14, $font-weight-regular);
+      }
+    }
+  }
+}

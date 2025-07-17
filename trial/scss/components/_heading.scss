@@ -1,0 +1,23 @@
+@use '../foundation/globals' as *;
+
+// セクションタイトル汎用
+.c-section-title {
+  font-family: $font-title;
+  font-style: italic; // ← 斜めを強調
+  // font-weight: 500; // ← 太くしたいけど Cookie は 400のみ
+  font-size: 8.5rem;
+  text-align: center;
+  // margin-bottom: 60px;
+  position: relative;
+  z-index: $z-default;
+
+  .c-gradient-title {
+    display: inline-block;
+    padding: 0 $space-12;
+    background: $gradient-title-main;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

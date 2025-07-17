@@ -1,0 +1,86 @@
+@use '../foundation/globals' as *;
+
+// 共通：背景画像（パララックスに対応）
+.c-section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 336px;
+  z-index: $z-base; // -1にしないのがポイント！
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.u-relative {
+  position: relative;
+}
+.u-absolute-center {
+  position: absolute;
+  top: -110px; // またはtop: -40pxなどで重なり調整
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: $z-header; // 必要に応じて調整
+}
+
+// 内容ボックスラッパー（中央寄せ・白背景・シャドウ付き）
+.c-card-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 282px;
+  padding: $space-40;
+  background-color: $bg-default;
+  box-shadow: 0 0 76px rgba(0, 0, 0, 0.14);
+  position: relative;
+  // z-index: $z-default; // 背景との重なり制御（念のため）
+}
+
+// カード内の基本整列
+.c-card {
+  text-align: center;
+}
+
+// ラベル（共通キャッチコピー）
+.c-label {
+  display: inline-block;
+  @include font($fs-40, $font-weight-bold, $lh-100);
+  margin-top: $space-24;
+  margin-bottom: $space-38;
+  background-color: $bg-black;
+  padding: $space-10 $space-12;
+
+  // グラデーションテキスト
+  .gradient-text {
+    background: $gradient-title-sub;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 0 transparent);
+    -webkit-text-stroke: 0.3px transparent;
+    transform: translateZ(0);
+    overflow: visible;
+  }
+}
+
+// サブキャッチコピー
+.c-lead {
+  @include font($fs-18);
+  margin-bottom: $space-48;
+}
+
+// 本文（段落あり）
+.c-text {
+  @include font($fs-18, $line-height: $lh-loose);
+  text-align: center;
+  letter-spacing: 0.06rem;
+  margin-bottom: $space-40;
+  p + p {
+    margin-top: $space-24;
+  }
+}

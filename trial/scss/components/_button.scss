@@ -1,0 +1,68 @@
+@use '../foundation/globals' as *;
+
+.c-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: max-content;
+  padding: 14px 24px;
+  @include font-button-bold;
+  border-radius: $radius-pill;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: $space-88;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  gap: 8px;
+
+  &--cta {
+    background: $bg-primary;
+    color: $text-white;
+    padding: $space-40 $space-24 $space-40 11.25rem;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 85%;
+      height: 30%;
+      background: linear-gradient(
+        to top,
+        rgba($bg-default, 0),
+        rgba($green-100, 0.9)
+      );
+
+      border-radius: inherit;
+      pointer-events: none;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: $space-140;
+  }
+
+  &__icon-bg,
+  &__icon-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__icon-arrow {
+    left: 17px;
+    top: 13px;
+    width: 14px;
+    height: 17px;
+  }
+}

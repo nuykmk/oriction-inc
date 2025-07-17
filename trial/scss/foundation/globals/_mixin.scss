@@ -1,0 +1,59 @@
+@use 'variables' as *;
+
+// ==============================
+// Font Mixin - Base
+// ==============================
+
+@mixin font($size, $weight: null, $line-height: null) {
+  font-size: $size;
+
+  @if $weight != null {
+    font-weight: $weight;
+  }
+
+  @if $line-height != null {
+    line-height: $line-height;
+  }
+}
+
+// ==============================
+// Font Mixin - Preset（W5ベース）
+// ==============================
+
+// Title / Heading
+@mixin font-page-title {
+  @include font($fs-64, $font-weight-bold, $lh-tight);
+}
+
+@mixin font-section-title {
+  @include font($fs-40, $font-weight-bold, $lh-tight);
+}
+
+@mixin font-heading {
+  @include font($fs-24, $font-weight-bold, $lh-medium);
+}
+
+@mixin font-subheading {
+  @include font($fs-18); // ← font-weight・line-heightはbody継承
+}
+
+// Body Text
+@mixin font-body {
+  @include font($fs-18); // ← 継承でOK（medium想定）
+}
+
+@mixin font-caption {
+  @include font(
+    $fs-12,
+    $font-weight-regular
+  ); // ← 小さくて軽くしたいときのみ個別指定
+}
+
+// Button Text
+@mixin font-button {
+  @include font($fs-28); // ← medium継承
+}
+
+@mixin font-button-bold {
+  @include font($fs-32, $font-weight-bold, $lh-none); // ← 強調ボタン
+}

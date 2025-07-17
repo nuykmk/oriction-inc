@@ -1,0 +1,121 @@
+@use '../globals' as *;
+
+html {
+  // font-size: 62.5%; /* 1rem = 10px廃止 */
+  // 1rem = 16px で方針統一
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $font-base;
+  color: $text-default;
+  background: $bg-default;
+  letter-spacing: $ls-normal;
+  line-height: $lh-default;
+  font-weight: $font-weight-medium;
+  // max-width: 3000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body > * {
+  max-width: 3000px;
+  margin: 0 auto;
+}
+
+section {
+  max-width: 3000px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.layout-padding {
+  padding: 0 5%; // 端の余白だけここで調整
+}
+
+.layout-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+// タイトル系
+// h2 {
+//   font-size: 1.5rem;
+//   font-weight: 400;
+
+//   @include mq(xl) {
+//     font-size: 1.5rem;
+//   }
+// }
+
+// h3 {
+//   font-size: 1.5rem;
+
+//   @include mq(xl) {
+//     font-size: 1.25rem;
+//   }
+// }
+
+// 表示制御系ユーティリティ
+// 🧱 ブロック要素向け
+.sp-only {
+  display: none !important;
+
+  @include mq(xl) {
+    display: block !important;
+  }
+}
+.pc-only {
+  display: block !important;
+
+  @include mq(xl) {
+    display: none !important;
+  }
+}
+
+// ✒️ インライン要素向け（span用）
+.sp-inline-only {
+  display: none !important;
+
+  @include mq(xl) {
+    display: inline !important;
+  }
+}
+.pc-inline-only {
+  display: inline !important;
+
+  @include mq(xl) {
+    display: none !important;
+  }
+}
+
+// 👻 スマホだけ非表示（インライン）
+.sp-inline-none {
+  display: inline;
+
+  @include mq(xl) {
+    display: none;
+  }
+}
+
+// 改行制御（brタグや span で使用）
+.br-pc-only {
+  display: inline;
+
+  @include mq(xl) {
+    display: none;
+  }
+}
+
+.br-sp-only {
+  display: none;
+
+  @include mq(xl) {
+    display: inline;
+  }
+}

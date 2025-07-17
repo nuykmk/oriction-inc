@@ -1,0 +1,258 @@
+// ==============================
+// Color - Base
+// ==============================
+
+$white: #ffffff;
+$black: #000000;
+
+// $gray-base: #eeeeee;
+// $gray-light: #f7f7f7;
+// $gray-dark: #aaaaaa;
+
+$red-base: #ec0000;
+$pink-base: #e16792;
+$blue-base: #232245;
+$green-base: #00bc85;
+$accent-base: #ff693b;
+
+// ==============================
+// グラデーション定義
+// ==============================
+
+// タイトル系グラデーション
+// $gradient-title-main: linear-gradient(-135deg, #faed83, #bf70dd, #2e55c2);
+$gradient-title-main: linear-gradient(
+  -133deg,
+  #faed83 20%,
+  #bf70dd 50%,
+  #2e55c2 85%
+);
+$gradient-title-sub: linear-gradient(
+  to left,
+  #96e0da,
+  #f8f1cc,
+  #eaccf8,
+  #937ef3
+);
+
+// 背景グラデーション（各セクション専用）
+$gradient-fv-bg: linear-gradient(to right, #b9f3ff, #ffe6f0);
+$gradient-schedule-bg: linear-gradient(to right, #ff693b, #ffb66f, #faed83);
+
+// ==============================
+// Color - Variants
+// ==============================
+
+// Gray
+// $gray-100: $gray-light;
+// $gray-500: $gray-base;
+// $gray-700: $gray-dark;
+
+// Red
+// $red-100: #ffe3e3;
+// $red-500: $red-base;
+// $red-700: #a10000;
+
+// Pink
+$pink-100: #e1adbf;
+$pink-500: $pink-base;
+$pink-700: #de2f6d;
+
+// Blue
+$blue-100: #e3f2fd;
+$blue-500: $blue-base;
+$blue-700: #232245;
+
+// Green
+$green-100: #e6fbad;
+$green-500: $green-base;
+$green-700: #02986b;
+
+// Accent（例：オレンジ系）
+// $accent-100: #ffebcc;
+// $accent-500: $accent-base;
+// $accent-700: #cc7a00;
+
+// ==============================
+// Semantic Colors
+// ==============================
+
+// Text
+$text-default: $black;
+// $text-sub: $gray-700;
+// $text-disabled: $gray-500;
+// $text-placeholder: $gray-700;
+// $text-link: $blue-500;
+// $text-alert: $red-500;
+$text-accent: $pink-500;
+$text-white: $white;
+
+// Background
+$bg-default: $white;
+// $bg-muted: $gray-100;
+$bg-primary: $green-500;
+$bg-accent: $pink-500;
+// $bg-active: #cff7e4;
+// $bg-warning: #927200;
+$bg-black: $black;
+
+// Border
+// $border-default: $gray-500;
+// $border-light: $gray-100;
+// $border-primary: $green-500;
+// $border-error: $red-500;
+// $border-accent: $accent-500;
+$border-white: $white;
+$border-black: $black;
+
+// ==============================
+// Font
+// ==============================
+
+$font-base: 'Noto Sans JP', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-title: 'Cookie', cursive;
+
+$font-weight-regular: 400; // W4/ Regular（Photoshop）
+$font-weight-medium: 500; // W5/ Medium（Photoshop）
+$font-weight-bold: 600; // W6/ SemiBold（Photoshop）
+$font-weight-bold-heavy: 700; // W7/ Bold（Photoshop）
+$font-weight-extra-bold: 800; // W8/ ExtraBold（Photoshop）
+$font-weight-black: 900; // W9/ Black（Photoshop）
+
+// Font Sizes (rem)
+$fs-10: 0.625rem; // 10px
+$fs-12: 0.75rem; // 12px
+$fs-14: 0.875rem; // 14px
+$fs-16: 1rem; // 16px
+$fs-18: 1.125rem; // 18px
+$fs-20: 1.25rem; // 20px
+$fs-24: 1.5rem; // 24px
+$fs-26: 1.625rem; //26px
+$fs-28: 1.75rem; // 28px
+$fs-32: 2rem; // 32px
+$fs-36: 2.25rem; // 36px
+$fs-40: 2.5rem; // 40px
+$fs-48: 3rem; // 48px
+$fs-56: 3.5rem; // 56px
+$fs-64: 4rem; // 64px
+$fs-72: 4.5rem; // 72px
+$fs-80: 5rem; // 80px
+
+// ==============================
+// Line Height
+// ==============================
+
+$lh-100: 1;
+$lh-120: 1.2;
+$lh-130: 1.3;
+$lh-150: 1.5;
+$lh-160: 1.6;
+$lh-180: 1.8;
+
+// 意味ベースで紐付け（数字エイリアスを使用）
+$lh-none: $lh-100; // ボタン内テキストなど行間なしで詰めたい時に
+$lh-compact: $lh-120; // やや詰め気味
+$lh-tight: $lh-130; // 見出しやラベル向け
+$lh-medium: $lh-150; // 汎用的なテキスト用（デフォルトに近い）
+$lh-default: $lh-160; // ブラウザのデフォルトに準拠
+$lh-loose: $lh-180; // 行間広めの説明文などに
+
+// ==============================
+// Letter Spacing
+// ==============================
+$ls-tightest: -0.05em; // 最も詰める（ロゴ・漢字見出し）
+$ls-tight: 0em; // 少し詰める（本文・日本語標準）
+$ls-normal: 0.05em; // 一般的な標準（Web全体のベースに最適）
+$ls-wide: 0.1em; // やや広め（英字・サブコピー向け）
+$ls-widest: 0.2em; // 最も広め（装飾見出し・ロゴ風に）
+
+// ==============================
+// Spacing (margin / padding) - rem
+// ==============================
+
+$space-4: 0.25rem; // 4px
+$space-8: 0.5rem; // 8px
+$space-10: 0.625rem; //10px
+$space-12: 0.75rem; // 12px
+$space-16: 1rem; // 16px
+$space-20: 1.25rem; // 20px
+$space-24: 1.5rem; // 24px
+$space-28: 1.75rem; // 28px
+$space-30: 1.875rem; // 30px
+$space-32: 2rem; // 32px
+$space-36: 2.25rem; // 36px
+$space-38: 2.375rem; // 38px
+$space-40: 2.5rem; // 40px
+$space-48: 3rem; // 48px
+$space-56: 3.5rem; // 56px
+$space-64: 4rem; // 64px
+$space-72: 4.5rem; // 72px
+$space-80: 5rem; // 80px
+$space-88: 5.5rem; // 88px
+$space-96: 6rem; // 96px
+$space-104: 6.5rem; // 104px
+$space-112: 7rem; // 112px
+$space-120: 7.5rem; // 120px
+$space-140: 8.75rem; //140px
+// ==============================
+// Border Radius
+// ==============================
+
+$radius-none: 0;
+$radius-sm: 2px;
+$radius-md: 4px;
+$radius-lg: 8px;
+$radius-xl: 16px;
+$radius-pill: 9999px;
+$radius-circle: 50%;
+
+// ==============================
+// Shadow
+// ==============================
+
+$shadow-default: 0 1px 76px rgba(0, 0, 0, 0.14);
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 2px 6px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+// ==============================
+// Opacity
+// ==============================
+
+$opacity-90: 0.9;
+$opacity-80: 0.8;
+$opacity-60: 0.6;
+$opacity-30: 0.3;
+$opacity-10: 0.1;
+$opacity-disabled: 0.4;
+
+// ==============================
+// Background Images
+// ==============================
+
+$bg-fv: url('../../../img/fv-bg.webp');
+$bg-section1: url('../../../img/about-bg.webp');
+$bg-noise: url('../../../img/merit-bg.webp');
+
+// ==============================
+// z-index
+// ==============================
+
+// Base Layer
+$z-negative: -1; // 背景・下層用
+$z-base: 0; // 通常要素の基準レイヤー
+$z-default: 1; // 最小限の z-index 指定用（明示）
+
+// UI Elements
+$z-header: 100; // ヘッダー・ナビゲーションなど
+$z-dropdown: 200; // ドロップダウン・ナビ内パーツなど
+$z-sticky: 300; // スティッキー要素
+
+// Overlay / Modal系
+$z-overlay: 500; // 黒背景などのオーバーレイ
+$z-modal: 600; // モーダル本体
+
+// Utility / 最上位
+$z-tooltip: 800; // ツールチップ
+$z-fixed-ui: 900; // 固定ボタン・CTA・チャットボタンなど
+$z-max: 9999; // 完全最上層
