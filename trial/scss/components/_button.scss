@@ -1,12 +1,17 @@
 @use '../foundation/globals' as *;
 
+// ==============================
+// CTAボタン
+// ==============================
 .c-button {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   margin: 0 auto;
-  width: max-content;
-  padding: 14px 24px;
+  width: 540px;
+  // padding: 14px 24px;
+  padding: $space-40 $space-24;
+  padding-left: $space-80;
   @include font-button-bold;
   border-radius: $radius-pill;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -15,12 +20,12 @@
   position: relative;
   overflow: hidden;
   transition: all 0.3s;
-  gap: 8px;
+  // gap: 8px;
 
   &--cta {
     background: $bg-primary;
     color: $text-white;
-    padding: $space-40 $space-24 $space-40 11.25rem;
+    // padding: $space-40 $space-24 $space-40 11.25rem;
 
     &:hover {
       filter: brightness(0.9);
@@ -43,6 +48,9 @@
       pointer-events: none;
     }
   }
+  &__text {
+    white-space: nowrap;
+  }
 
   &__icon {
     display: inline-block;
@@ -64,5 +72,51 @@
     top: 13px;
     width: 14px;
     height: 17px;
+  }
+}
+
+// ==============================
+// Topへボタン
+// ==============================
+
+.c-page-top {
+  color: $bg-default;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: $z-fixed-ui;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    width: 66px;
+    height: 66px;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__arrow {
+    color: $border-accent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
   }
 }

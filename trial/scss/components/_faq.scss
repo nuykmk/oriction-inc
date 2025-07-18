@@ -1,0 +1,135 @@
+@use '../foundation/globals' as *;
+
+// ==============================
+// FAQ
+// ==============================
+.p-faq {
+  .p-faq__padding {
+    margin-top: 150px;
+    margin-bottom: $space-58;
+  }
+
+  .p-faq__content {
+    box-shadow: none;
+    margin-top: 0;
+    .p-faq__label {
+      margin-bottom: 55px;
+    }
+  }
+}
+
+// ==============================
+// アコーディオン
+// ==============================
+.accordion {
+  width: 100%;
+  @include font($fs-24, $font-weight-bold, $lh-100);
+
+  &__item {
+    background-color: $bg-accent; // ピンク背景
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  &__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: $space-20;
+    position: relative;
+  }
+
+  &__q {
+    display: inline-block;
+    @include font($fs-22, $font-weight-regular);
+    color: $text-accent;
+    background-color: $bg-default;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: $space-18;
+    flex-shrink: 0;
+  }
+
+  &__question-text {
+    color: #fff;
+    font-weight: bold;
+    flex: 1;
+  }
+
+  &__icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $bg-default;
+      transition: 0.3s;
+    }
+
+    &::before {
+      width: 32px;
+      height: 3px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      width: 3px;
+      height: 32px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__answer {
+    background-color: $bg-default;
+    display: none;
+    padding: $space-20;
+    outline: none;
+  }
+
+  &__a {
+    display: inline-block;
+    @include font($fs-22, $font-weight-regular);
+
+    color: $text-white;
+    background-color: $bg-accent;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: $space-18;
+    flex-shrink: 0;
+  }
+
+  &__answer-text {
+    display: inline;
+    @include font($fs-18);
+  }
+
+  // 開いたときのスタイル
+  &__item.is-open {
+    .accordion__answer {
+      display: block;
+    }
+
+    .accordion__icon {
+      &::after {
+        transform: translateX(-50%) rotate(90deg);
+        opacity: 0;
+      }
+    }
+  }
+}

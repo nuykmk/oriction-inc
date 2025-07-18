@@ -128,7 +128,7 @@
 // ==============================
 .p-merit {
   position: relative;
-  padding-bottom: $space-104;
+  padding-bottom: $space-46;
   background: $bg-default;
   overflow: hidden;
   .c-text {
@@ -164,6 +164,50 @@
       mask-repeat: no-repeat;
     }
   }
+}
+.p-merit-catch__group {
+  margin: 0 auto;
+  margin-top: $space-96;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-merit-catch__sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: $text-default; // SVGのstrokeカラーに反映される
+}
+
+// 導入テキスト
+.p-merit-catch__sub-text {
+  @include font($fs-32, $font-weight-bold);
+}
+
+// 左右のライン（2本セットでラップ）
+.p-merit-catch__lines {
+  display: inline-flex;
+  // gap: 2px;
+  position: relative;
+  align-items: flex-end;
+
+  &--left {
+    align-items: flex-end;
+  }
+
+  &--right {
+    align-items: flex-end;
+  }
+}
+
+// SVGの個別ライン
+.p-merit-catch__line {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  color: $text-default;
 }
 
 // ==============================
@@ -208,4 +252,18 @@
       }
     }
   }
+}
+
+// ==============================
+// FAQ
+// ==============================
+.c-p-faq__content {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 282px;
+  padding: $space-40;
+  background-color: $bg-default;
+  box-shadow: 0 0 76px rgba(0, 0, 0, 0.14);
+  position: relative;
+  // z-index: $z-default; // 背景との重なり制御（念のため）
 }

@@ -23,6 +23,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cookie&family=Noto+Sans+JP:wght@100..900&family=Satisfy&display=swap"
     rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <!-- CSS -->
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -83,7 +85,7 @@
 
     <!-- CTAボタン -->
     <button type="button" class="c-button c-button--cta" id="entry">
-      申し込む！
+      <span class="c-button__text">申し込む！</span>
       <span class="c-button__icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" class="c-button__icon-bg">
           <path fill="#fcfcfc"
@@ -165,7 +167,196 @@
 
       </div>
     </div>
+    <!-- キャッチコピー -->
+    <div class="p-merit-catch__group js-fade-catch js-parallax">
+
+      <!-- 上部の導入キャッチ（メリットセクション専用） -->
+      <div class="p-merit-catch__sub js-fade-catch js-parallax">
+
+        <!-- 左：2本線（上 → 下）-->
+        <span class="p-merit-catch__lines p-merit-catch__lines--left">
+          <!-- 短い線 -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2.7 1.585 8.8 15.199" width="10" height="20"
+            class="p-merit-catch__line">
+            <path d="M11.5,16.784 L2.7,1.585" stroke="currentColor" stroke-width="2" fill="none" />
+          </svg>
+          <!-- 長い線 -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2.3 2.184 13.6 32.8" width="14" height="38"
+            class="p-merit-catch__line">
+            <path d="M15.9,34.984 L2.3,2.184" stroke="currentColor" stroke-width="2" fill="none" />
+          </svg>
+        </span>
+
+        <!-- テキスト -->
+        <p class="p-merit-catch__sub-text">我々宇宙人が</p>
+
+        <!-- 右：2本線（上 → 下）-->
+        <span class="p-merit-catch__lines p-merit-catch__lines--right">
+          <!-- 長い線 -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2.3 2.184 13.6 32.8" width="14" height="38"
+            class="p-merit-catch__line">
+            <path d="M2.3,34.984 L15.9,2.184" stroke="currentColor" stroke-width="2" fill="none" />
+          </svg>
+          <!-- 短い線 -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="1.9 1.585 8.8 15.199" width="10" height="20"
+            class="p-merit-catch__line">
+            <path d="M1.9,16.784 L10.7,1.585" stroke="currentColor" stroke-width="2" fill="none" />
+          </svg>
+        </span>
+      </div>
+
+      <!-- 下部キャッチコピー（共通パーツ） -->
+      <p class="c-label js-fade-label js-parallax">
+        <span class="gradient-text">ORICTIONなんです</span>
+      </p>
+    </div>
+    <!-- swiper -->
+    <section class="p-merit-slider">
+      <div class="layout-padding p-merit-slider__padding">
+        <div class="layout-inner p-merit-slider__inner">
+          <div class="p-merit-slider__swiper">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+
+                <!-- スライド1 -->
+                <article class="swiper-slide p-merit-slider__slide">
+                  <div class="p-merit-slider__profile">
+                    <div class="p-merit-slider__icon">
+                      <img src="img/icon-user.png" alt="インタビュー画像" />
+                    </div>
+                    <div class="p-merit-slider__info">
+                      <p class="p-merit-slider__name">テキストが入ります。<br>テキストが入ります。</p>
+                      <p class="p-merit-slider__meta">2001歳　金星人</p>
+                    </div>
+                  </div>
+
+                  <section class="p-merit-slider__q-group">
+                    <div class="p-merit-slider__qa">
+                      <h3 class="p-merit-slider__question">Q. 地域を選んだ理由</h3>
+                      <p class="p-merit-slider__answer">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+
+
+                      </p>
+                    </div>
+                    <div class="p-merit-slider__qa">
+                      <h3 class="p-merit-slider__question">Q. ORICTIONの会社説明会に参加した感想</h3>
+                      <p class="p-merit-slider__answer">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="p-merit-slider__qa">
+                      <h3 class="p-merit-slider__question">Q. 参加したからこそ分かる</h3>
+                      <p class="p-merit-slider__answer">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                  </section>
+                </article>
+
+                <!-- スライド2 -->
+                <article class="swiper-slide p-merit-slider__slide p-merit-slider__slide2">
+                  <div class="p-merit-slider__profile">
+                    <div class="p-merit-slider__icon">
+                      <img src="img/icon-user.png" alt="インタビュー画像" />
+                    </div>
+                    <div class="p-merit-slider__info">
+                      <p class="p-merit-slider__name">テキストが入ります。<br>テキストが入ります。</p>
+                      <p class="p-merit-slider__meta">2001歳　金星人</p>
+                    </div>
+                  </div>
+
+                  <section class="p-merit-slider__q-group">
+                    <div class="p-merit-slider__qa">
+                      <h3 class="p-merit-slider__question">Q. 地域を選んだ理由</h3>
+                      <p class="p-merit-slider__answer">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+
+
+                      </p>
+                    </div>
+                    <div class="p-merit-slider__qa">
+                      <h3 class="p-merit-slider__question">Q. ORICTIONの会社説明会に参加した感想</h3>
+                      <p class="p-merit-slider__answer">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="p-merit-slider__qa">
+                      <h3 class="p-merit-slider__question">Q. 参加したからこそ分かる</h3>
+                      <p class="p-merit-slider__answer">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                  </section>
+                </article>
+
+                <!-- スライド3 -->
+                <article class="swiper-slide p-merit-slider__slide p-merit-slider__slide3">
+                  <div class="p-merit-slider__profile">
+                    <div class="p-merit-slider__icon">
+                      <img src="img/icon-user.png" alt="インタビュー画像" />
+                    </div>
+                    <div class="p-merit-slider__info">
+                      <p class="p-merit-slider__name">テキストが入ります。<br>テキストが入ります。</p>
+                      <p class="p-merit-slider__meta">2001歳　金星人</p>
+                    </div>
+                  </div>
+
+                  <section class="p-merit-slider__q-group">
+                    <div class="p-merit-slider__qa">
+                      <h3 class="p-merit-slider__question">Q. 地域を選んだ理由</h3>
+                      <p class="p-merit-slider__answer">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+
+
+                      </p>
+                    </div>
+                    <div class="p-merit-slider__qa">
+                      <h3 class="p-merit-slider__question">Q. ORICTIONの会社説明会に参加した感想</h3>
+                      <p class="p-merit-slider__answer">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="p-merit-slider__qa">
+                      <h3 class="p-merit-slider__question">Q. 参加したからこそ分かる</h3>
+                      <p class="p-merit-slider__answer">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                  </section>
+                </article>
+
+              </div>
+
+            </div>
+            <!-- ナビボタン -->
+            <div class="p-merit-slider__nav">
+              <div class="p-merit-slider__prev"></div>
+              <div class="p-merit-slider__next"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
   </section>
+  <!-- CTAボタン -->
+  <button type="button" class="c-button c-button--cta" id="entry">
+    <span class="c-button__text">イベントに申し込む！</span>
+    <span class="c-button__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" class="c-button__icon-bg">
+        <path fill="#fcfcfc"
+          d="M21.544,1.815 C32.411,1.815 41.220,10.623 41.220,21.492 C41.220,32.359 32.411,41.167 21.544,41.167 C10.677,41.167 1.867,32.359 1.867,21.492 C1.867,10.623 10.677,1.815 21.544,1.815 Z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" class="c-button__icon-arrow">
+        <path fill="#00bc85" d="M0.005,16.052 L0.118,0.926 L13.113,8.391 L0.005,16.052 Z" />
+      </svg>
+    </span>
+  </button>
 
   <!-- Schedule -->
   <section class="p-schedule js-parallax-trigger">
@@ -218,12 +409,101 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="p-faq js-parallax-trigger">
+    <div class="layout-padding p-faq__padding">
+      <div class="layout-inner p-faq__inner">
+        <div class="p-faq__layout p-faq__content c-card-wrap js-fade-card js-parallax  u-relative">
+          <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
+          <h2 class="p-faq__title c-section-title js-parallax u-absolute-center">
+            <span class="c-section-title__text c-gradient-title js-split-text">FAQ</span>
+          </h2>
+          <div class="c-card">
+            <!-- 共通：キャッチコピー -->
+            <p class="c-label p-faq__label js-fade-label js-parallax">
+              <span class="gradient-text">よくあるご質問
+              </span>
+            </p>
+          </div>
+          <!-- アコーディオン -->
+          <ul class="p-faq__accordion accordion js-accordion">
+            <li class="accordion__item">
+              <div class="accordion__question js-accordion-trigger">
+                <span class="accordion__q">Q</span>
+                <p class="accordion__question-text">無料で参加できますか？</p>
+                <span class="accordion__icon"></span>
+              </div>
+              <div class="accordion__answer">
+                <span class="accordion__a">A</span>
+                <p class="accordion__answer-text">無料でご参加いただけます。お申し込みには宇宙人化が必要です。</p>
+              </div>
+            </li>
+
+            <li class="accordion__item">
+              <div class="accordion__question js-accordion-trigger">
+                <span class="accordion__q">Q</span>
+                <p class="accordion__question-text">当日はどのようなテーマのお話を聞けますか？</p>
+                <span class="accordion__icon"></span>
+              </div>
+              <div class="accordion__answer">
+                <span class="accordion__a">A</span>
+                <p class="accordion__answer-text">宇宙船にて公開しています。お申し込み後にご案内いたしますので、お待ちください。</p>
+              </div>
+            </li>
+
+            <li class="accordion__item">
+              <div class="accordion__question js-accordion-trigger">
+                <span class="accordion__q">Q</span>
+                <p class="accordion__question-text">地球に帰ることはできますか？</p>
+                <span class="accordion__icon"></span>
+              </div>
+              <div class="accordion__answer">
+                <span class="accordion__a">A</span>
+                <p class="accordion__answer-text">できません。</p>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TOPへボタン -->
+  <button class="c-page-top js-page-top" aria-label="ページトップへ">
+    <span class="c-page-top__icon">
+      <!-- 白丸SVG（背景） -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 44 44" class="c-page-top__bg">
+        <path fill="currentColor"
+          d="M21.544,1.815 C32.411,1.815 41.220,10.623 41.220,21.492 C41.220,32.359 32.411,41.167 21.544,41.167 C10.677,41.167 1.867,32.359 1.867,21.492 C1.867,10.623 10.677,1.815 21.544,1.815 Z" />
+      </svg>
+
+      <!-- 矢印SVG（中身） -->
+      <svg class="c-page-top__arrow" xmlns="http://www.w3.org/2000/svg" width="54.685" height="32.685"
+        viewBox="0 0 54.685 32.685">
+        <path fill="currentColor" stroke="currentColor" stroke-width="3.79" stroke-linecap="butt"
+          stroke-linejoin="miter"
+          d="M47.239,24.533 L46.551,25.257 L26.879,6.569 L5.222,25.273 L4.568,24.517 L26.568,5.517 L26.895,5.895 L27.239,5.532 L47.239,24.533 Z" />
+      </svg>
+    </span>
+  </button>
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="layout-padding p-footer__padding">
+      <div class="layout-inner p-footer__inner">
+        <div class="p-footer__content js-fade-card js-parallax  u-relative">
+          <small>&copy;copyright sample</small>
+        </div>
+      </div>
+  </footer>
+
   <!-- 共通ライブラリ -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- このページ限定のJS-->
+  <!-- swiper-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
   <!-- 共通のJS（全ページで使う） -->
-  <script src="js/script.js"></script>
+  <script src="js/accordion.js"></script>
+  <script src="js/swiper.js"></script>
   <script src="js/main.js"></script>
 </body>
 

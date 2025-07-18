@@ -11,7 +11,7 @@ $black: #000000;
 
 $red-base: #ec0000;
 $pink-base: #e16792;
-$blue-base: #232245;
+$blue-base: #504bd5;
 $green-base: #00bc85;
 $accent-base: #ff693b;
 
@@ -101,7 +101,7 @@ $bg-black: $black;
 // $border-light: $gray-100;
 // $border-primary: $green-500;
 // $border-error: $red-500;
-// $border-accent: $accent-500;
+$border-accent: $pink-500;
 $border-white: $white;
 $border-black: $black;
 
@@ -126,6 +126,7 @@ $fs-14: 0.875rem; // 14px
 $fs-16: 1rem; // 16px
 $fs-18: 1.125rem; // 18px
 $fs-20: 1.25rem; // 20px
+$fs-22: 1.375rem; // 22px
 $fs-24: 1.5rem; // 24px
 $fs-26: 1.625rem; //26px
 $fs-28: 1.75rem; // 28px
@@ -174,7 +175,9 @@ $space-4: 0.25rem; // 4px
 $space-8: 0.5rem; // 8px
 $space-10: 0.625rem; //10px
 $space-12: 0.75rem; // 12px
+$space-14: 0.875rem; // 14px
 $space-16: 1rem; // 16px
+$space-18: 1.125rem; // 18px
 $space-20: 1.25rem; // 20px
 $space-24: 1.5rem; // 24px
 $space-28: 1.75rem; // 28px
@@ -183,13 +186,17 @@ $space-32: 2rem; // 32px
 $space-36: 2.25rem; // 36px
 $space-38: 2.375rem; // 38px
 $space-40: 2.5rem; // 40px
+$space-44: 2.75rem; // 44px
+$space-46: 2.875rem; // 46px
 $space-48: 3rem; // 48px
 $space-56: 3.5rem; // 56px
+$space-58: 3.625rem; // 58px
 $space-64: 4rem; // 64px
 $space-72: 4.5rem; // 72px
 $space-80: 5rem; // 80px
 $space-88: 5.5rem; // 88px
 $space-96: 6rem; // 96px
+$space-100: 6.25rem; // 100px
 $space-104: 6.5rem; // 104px
 $space-112: 7rem; // 112px
 $space-120: 7.5rem; // 120px

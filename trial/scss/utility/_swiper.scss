@@ -1,1 +1,157 @@
 @use '../foundation/globals' as *;
+// ==============================
+// Merit Swiper
+// ==============================
+
+.p-merit-slider__inner {
+  max-width: 920px;
+}
+.p-merit-slider {
+  // セクション全体のマージン調整（必要に応じて）
+  padding-top: $space-14;
+  // width: 920px;
+  // height: 700px;
+
+  // &__padding {
+  //   @include layout-padding;
+  // }
+
+  // &__inner {
+  //   @include layout-inner;
+  // }
+
+  &__swiper {
+    position: relative;
+    overflow: visible; // ←変更！
+    max-width: 1000px;
+  }
+
+  &__slide {
+    background-color: $bg-accent;
+    color: $text-white;
+    padding: $space-44;
+
+    // レスポンシブ対応
+    // @include mq(md) {
+    //   padding: 32px;
+    // }
+  }
+  &__slide2 {
+    background-color: $bg-primary;
+  }
+  &__slide3 {
+    background-color: $blue-500;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: $space-32;
+    margin-bottom: $space-40;
+
+    // @include mq(md) {
+    //   gap: 24px;
+    // }
+  }
+
+  &__icon {
+    width: 152px;
+    height: 152px;
+    // border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: $space-24;
+  }
+
+  &__name {
+    @include font($fs-24);
+  }
+
+  &__meta {
+    @include font($fs-18);
+  }
+
+  &__q-group {
+    display: flex;
+    flex-direction: column;
+    gap: $space-32;
+  }
+
+  &__question {
+    background-color: $bg-black;
+    padding: $space-10 $space-20;
+    @include font($fs-20, $font-weight-bold, $lh-100);
+    margin-bottom: 8px;
+  }
+
+  &__answer {
+    @include font($fs-18, $line-height: $lh-180);
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    > * {
+      pointer-events: auto; // ← ボタンだけクリック可能に
+    }
+  }
+
+  &__prev,
+  &__next {
+    display: block;
+    pointer-events: auto;
+    width: 52px;
+    height: 52px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 52px 52px;
+
+    &.swiper-button-disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+
+  &__prev {
+    position: absolute;
+    background-image: url('../../img/btn-arrow-prev.png');
+    left: -26px; // ←幅の半分を左へはみ出させる
+  }
+
+  &__next {
+    position: absolute;
+    background-image: url('../../img/btn-arrow-next.png');
+    right: -26px; // ←幅の半分を右へはみ出させる
+  }
+}
+// Swiperの「デフォルトクラス」だけを対象にして消す
+.swiper-button-next:not(.p-merit-slider__next),
+.swiper-button-prev:not(.p-merit-slider__prev) {
+  display: none !important;
+}
+// .swiper {
+//   overflow: hidden; // ← これ大事！
+// }
+
+// .swiper-slide {
+//   width: 100%; // ← 横幅を100%に
+//   flex-shrink: 0; // ← Swiperで横スクロールさせるため必須
+// }

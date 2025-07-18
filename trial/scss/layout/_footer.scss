@@ -1,1 +1,25 @@
 @use '../foundation/globals' as *;
+
+// ==============================
+// Footer
+// ==============================
+
+.footer {
+  color: $text-white;
+  background-color: $bg-accent;
+  .p-footer__padding {
+    padding: $space-12 5%;
+  }
+  .p-footer__content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+    height: 100%;
+    height: 204px;
+  }
+  small {
+    font-size: $fs-16;
+    text-align: center;
+  }
+}
