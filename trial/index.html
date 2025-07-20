@@ -4,19 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon"><!-- favicon -->
+  <title>テスト用サイト</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"><!-- favicon -->
   <!-- SEO対策 -->
-  <meta name="description" content="テキスト" /><!-- 実際のサイト説明文に置き換えてください -->
+  <meta name="description" content="課題用のサンプルページです。" />
+  <meta name="keywords" content="" />
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://example.com/"> <!-- 実際のURLに置き換えてください -->
-  <!-- Twitterカード -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@nuykmk" />
-  <meta property="og:url" content="ページのURL" />
-  <meta property="og:title" content="ページのタイトル" />
-  <meta property="og:description" content="ページの説明文" />
-  <meta property="og:image" content="画像のURL" />
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,15 +26,17 @@
 <body>
   <!-- Header -->
   <header id="header" class="header">
-    <div class="header__inner layout-inner">
-      <button type="button" class="header__cta">
-        申し込む！
-        <span class="header__cta-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17">
-            <path fill="#ffffff" d="M0.005,16.052 L0.118,0.926 L13.113,8.391 L0.005,16.052 Z" />
-          </svg>
-        </span>
-      </button>
+    <div class="layout-padding header__padding">
+      <div class="header__inner layout-inner">
+        <a href="https://oriction.com/" class="header__cta" target="_blank" rel="noopener noreferrer">
+          申し込む！
+          <span class="header__cta-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17">
+              <path fill="#ffffff" d="M0.005,16.052 L0.118,0.926 L13.113,8.391 L0.005,16.052 Z" />
+            </svg>
+          </span>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -71,7 +66,8 @@
             <span class="highlight-bg"><span class="gradient-text"> <span class="fv__title-lg">サンプル</span><span
                   class="fv__title-sm">の</span> </span>
             </span><br>
-            <span class="highlight-bg"><span class="gradient-text">テスト用サイトです。</span></span>
+            <span class="highlight-bg"><span class="gradient-text">テスト用サイトです<span
+                  class="adjust-dot">。</span></span></span>
           </h1>
         </div>
       </div>
@@ -84,18 +80,22 @@
     </div>
 
     <!-- CTAボタン -->
-    <button type="button" class="c-button c-button--cta" id="entry">
-      <span class="c-button__text">申し込む！</span>
-      <span class="c-button__icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" class="c-button__icon-bg">
-          <path fill="#fcfcfc"
-            d="M21.544,1.815 C32.411,1.815 41.220,10.623 41.220,21.492 C41.220,32.359 32.411,41.167 21.544,41.167 C10.677,41.167 1.867,32.359 1.867,21.492 C1.867,10.623 10.677,1.815 21.544,1.815 Z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" class="c-button__icon-arrow">
-          <path fill="#00bc85" d="M0.005,16.052 L0.118,0.926 L13.113,8.391 L0.005,16.052 Z" />
-        </svg>
-      </span>
-    </button>
+    <div class="c-button__padding layout-padding">
+      <a href="https://oriction.com/" class="c-button c-button--cta" target="_blank" rel="noopener noreferrer">
+        <span class="c-button__text">申し込む！</span>
+        <span class="c-button__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" class="c-button__icon-bg">
+            <path fill="#fcfcfc"
+              d="M21.544,1.815 C32.411,1.815 41.220,10.623 41.220,21.492 C41.220,32.359 32.411,41.167 21.544,41.167 C10.677,41.167 1.867,32.359 1.867,21.492 C1.867,10.623 10.677,1.815 21.544,1.815 Z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17"
+            class="c-button__icon-arrow">
+            <path fill="#00bc85" d="M0.005,16.052 L0.118,0.926 L13.113,8.391 L0.005,16.052 Z" />
+          </svg>
+        </span>
+      </a>
+    </div>
+
   </section>
 
 
@@ -105,38 +105,41 @@
     <div class="c-section-bg js-parallax-bg">
       <img src="img/about-bg.webp" alt="Aboutイメージ" />
     </div>
+    <div class="layout-padding p-about__padding">
+      <div class="layout-inner p-about__inner">
 
 
+        <!-- 内容ボックス -->
+        <div class="c-card-wrap js-fade-card js-parallax  u-relative">
+          <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
+          <h2 class="c-section-title js-parallax u-absolute-center">
+            <span class="c-section-title__text c-gradient-title js-split-text">About</span>
+          </h2>
+          <div class="c-card">
 
-    <!-- 内容ボックス -->
-    <div class="c-card-wrap js-fade-card js-parallax  u-relative">
-      <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
-      <h2 class="c-section-title js-parallax u-absolute-center">
-        <span class="c-section-title__text c-gradient-title js-split-text">About</span>
-      </h2>
-      <div class="c-card">
+            <!-- ボックス内タイトル（aboutセクション固有） -->
+            <p class="p-about__subtitle js-fade-sub js-parallax">
+              <span class="p-about__logo">ORICTON</span>とは？
+            </p>
 
-        <!-- ボックス内タイトル（aboutセクション固有） -->
-        <p class="p-about__subtitle js-fade-sub js-parallax">
-          <span class="p-about__logo">ORICTON</span>とは？
-        </p>
+            <!-- 共通：キャッチコピー -->
+            <p class="p-about__label c-label js-fade-label js-parallax">
+              <span class="gradient-text">テスト用サンプルコピーが入るです！</span>
+            </p>
 
-        <!-- 共通：キャッチコピー -->
-        <p class="p-about__label c-label js-fade-label js-parallax">
-          <span class="gradient-text">テスト用サンプルコピーが入るです！</span>
-        </p>
+            <!-- 共通：サブキャッチコピー -->
+            <p class="c-lead js-fade-lead js-parallax">ここは十月ことにこういう講演心としてものの後を立ち行かまいませ。</p>
 
-        <!-- 共通：サブキャッチコピー -->
-        <p class="c-lead js-fade-lead js-parallax">ここは十月ことにこういう講演心としてものの後を立ち行かまいませ。</p>
+            <!-- 本文 -->
+            <div class="c-text js-fade-text js-parallax">
+              <p>
+                多分当時が説明院はけっしてその変化でたなどがほかならとしまいないのは入会行きたないて、さっそくには解るましんでん。秋刀魚から来だ事もあたかも今よりかつてしたいん。いよいよ嘉納さんから講演目的どうお尋ねがなるた詫この理論それか発見をというご持でたましんて、いわゆるほかはこれか金力会員がいるて、木下君ののが味の私にどうぞご満足と知れて私自己にご修養が引き離すようにとうていお戦争に持っますたて、もうまあ使用に解るでしょとならです事に握っですた。
+              </p>
+              <!-- <p>2段落目も必要ならここに。</p> -->
+            </div>
 
-        <!-- 本文 -->
-        <div class="c-text js-fade-text js-parallax">
-          <p>
-            多分当時が説明院はけっしてその変化でたなどがほかならとしまいないのは入会行きたないて、さっそくには解るましんでん。秋刀魚から来だ事もあたかも今よりかつてしたいん。いよいよ嘉納さんから講演目的どうお尋ねがなるた詫この理論それか発見をというご持でたましんて、いわゆるほかはこれか金力会員がいるて、木下君ののが味の私にどうぞご満足と知れて私自己にご修養が引き離すようにとうていお戦争に持っますたて、もうまあ使用に解るでしょとならです事に握っですた。
-          </p>
-          <!-- <p>2段落目も必要ならここに。</p> -->
+          </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -147,68 +150,73 @@
     <div class="p-merit__bg c-section-bg js-parallax-bg">
       <img src="img/merit-bg.webp" alt="meritイメージ" />
     </div>
-    <!-- 内容ボックス -->
-    <div class="c-card-wrap js-fade-card js-parallax  u-relative">
-      <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
-      <h2 class="c-section-title js-parallax u-absolute-center">
-        <span class="c-section-title__text c-gradient-title js-split-text">Merit</span>
-      </h2>
-      <div class="c-card">
-        <!-- 共通：キャッチコピー -->
-        <p class="c-label js-fade-label js-parallax">
-          <span class="gradient-text">サンプルコピーだす！</span>
-        </p>
-        <!-- 本文 -->
-        <div class="c-text js-fade-text js-parallax">
-          <p>
-            包みは耳のかっこうゴーシュらへ扉で急い曲だまし。またとてもだめたですという楽長ましまし。生意気たたんたはなかっいやボロンボロンのくたくた汁のところがは時々上手じならながら、それだってあとのなるれんたで。 </p>
-          <p>こさえよすぎこれは東を長いたで前の川の楽器団が持っ第二窓目のきちに休んてくださいたます。ゴーシュも一生なおるててだ。</p>
+    <div class="layout-padding p-merit__padding">
+      <div class="layout-inner p-merit__inner">
+        <!-- 内容ボックス -->
+        <div class="c-card-wrap js-fade-card js-parallax  u-relative">
+          <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
+          <h2 class="c-section-title js-parallax u-absolute-center">
+            <span class="c-section-title__text c-gradient-title js-split-text">Merit</span>
+          </h2>
+          <div class="c-card">
+            <!-- 共通：キャッチコピー -->
+            <p class="c-label js-fade-label js-parallax">
+              <span class="gradient-text">サンプルコピーだす！</span>
+            </p>
+            <!-- 本文 -->
+            <div class="c-text js-fade-text js-parallax">
+              <p>
+                包みは耳のかっこうゴーシュらへ扉で急い曲だまし。またとてもだめたですという楽長ましまし。生意気たたんたはなかっいやボロンボロンのくたくた汁のところがは時々上手じならながら、それだってあとのなるれんたで。
+              </p>
+              <p>こさえよすぎこれは東を長いたで前の川の楽器団が持っ第二窓目のきちに休んてくださいたます。ゴーシュも一生なおるててだ。</p>
+            </div>
+
+          </div>
         </div>
+        <!-- キャッチコピー -->
+        <div class="p-merit-catch__group js-fade-catch js-parallax">
 
+          <!-- 上部の導入キャッチ（メリットセクション専用） -->
+          <div class="p-merit-catch__sub js-fade-catch js-parallax">
+
+            <!-- 左：2本線（上 → 下）-->
+            <span class="p-merit-catch__lines p-merit-catch__lines--left">
+              <!-- 短い線 -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="2.7 1.585 8.8 15.199" width="10" height="20"
+                class="p-merit-catch__line">
+                <path d="M11.5,16.784 L2.7,1.585" stroke="currentColor" stroke-width="2" fill="none" />
+              </svg>
+              <!-- 長い線 -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="2.3 2.184 13.6 32.8" width="14" height="38"
+                class="p-merit-catch__line">
+                <path d="M15.9,34.984 L2.3,2.184" stroke="currentColor" stroke-width="2" fill="none" />
+              </svg>
+            </span>
+
+            <!-- テキスト -->
+            <p class="p-merit-catch__sub-text">我々宇宙人が</p>
+
+            <!-- 右：2本線（上 → 下）-->
+            <span class="p-merit-catch__lines p-merit-catch__lines--right">
+              <!-- 長い線 -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="2.3 2.184 13.6 32.8" width="14" height="38"
+                class="p-merit-catch__line">
+                <path d="M2.3,34.984 L15.9,2.184" stroke="currentColor" stroke-width="2" fill="none" />
+              </svg>
+              <!-- 短い線 -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="1.9 1.585 8.8 15.199" width="10" height="20"
+                class="p-merit-catch__line">
+                <path d="M1.9,16.784 L10.7,1.585" stroke="currentColor" stroke-width="2" fill="none" />
+              </svg>
+            </span>
+          </div>
+
+          <!-- 下部キャッチコピー（共通パーツ） -->
+          <p class="c-label js-fade-label js-parallax">
+            <span class="gradient-text">ORICTIONなんです</span>
+          </p>
+        </div>
       </div>
-    </div>
-    <!-- キャッチコピー -->
-    <div class="p-merit-catch__group js-fade-catch js-parallax">
-
-      <!-- 上部の導入キャッチ（メリットセクション専用） -->
-      <div class="p-merit-catch__sub js-fade-catch js-parallax">
-
-        <!-- 左：2本線（上 → 下）-->
-        <span class="p-merit-catch__lines p-merit-catch__lines--left">
-          <!-- 短い線 -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2.7 1.585 8.8 15.199" width="10" height="20"
-            class="p-merit-catch__line">
-            <path d="M11.5,16.784 L2.7,1.585" stroke="currentColor" stroke-width="2" fill="none" />
-          </svg>
-          <!-- 長い線 -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2.3 2.184 13.6 32.8" width="14" height="38"
-            class="p-merit-catch__line">
-            <path d="M15.9,34.984 L2.3,2.184" stroke="currentColor" stroke-width="2" fill="none" />
-          </svg>
-        </span>
-
-        <!-- テキスト -->
-        <p class="p-merit-catch__sub-text">我々宇宙人が</p>
-
-        <!-- 右：2本線（上 → 下）-->
-        <span class="p-merit-catch__lines p-merit-catch__lines--right">
-          <!-- 長い線 -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="2.3 2.184 13.6 32.8" width="14" height="38"
-            class="p-merit-catch__line">
-            <path d="M2.3,34.984 L15.9,2.184" stroke="currentColor" stroke-width="2" fill="none" />
-          </svg>
-          <!-- 短い線 -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="1.9 1.585 8.8 15.199" width="10" height="20"
-            class="p-merit-catch__line">
-            <path d="M1.9,16.784 L10.7,1.585" stroke="currentColor" stroke-width="2" fill="none" />
-          </svg>
-        </span>
-      </div>
-
-      <!-- 下部キャッチコピー（共通パーツ） -->
-      <p class="c-label js-fade-label js-parallax">
-        <span class="gradient-text">ORICTIONなんです</span>
-      </p>
     </div>
     <!-- swiper -->
     <section class="p-merit-slider">
@@ -343,68 +351,69 @@
 
 
 
+    <!-- CTAボタン -->
+    <div class="c-button__padding layout-padding">
+      <a href="https://oriction.com/" class="c-button c-button--cta" target="_blank" rel="noopener noreferrer">
+        <span class="c-button__text">イベントに申し込む！</span>
+        <span class="c-button__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" class="c-button__icon-bg">
+            <path fill="#fcfcfc"
+              d="M21.544,1.815 C32.411,1.815 41.220,10.623 41.220,21.492 C41.220,32.359 32.411,41.167 21.544,41.167 C10.677,41.167 1.867,32.359 1.867,21.492 C1.867,10.623 10.677,1.815 21.544,1.815 Z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17"
+            class="c-button__icon-arrow">
+            <path fill="#00bc85" d="M0.005,16.052 L0.118,0.926 L13.113,8.391 L0.005,16.052 Z" />
+          </svg>
+        </span>
+      </a>
+    </div>
   </section>
-  <!-- CTAボタン -->
-  <button type="button" class="c-button c-button--cta" id="entry">
-    <span class="c-button__text">イベントに申し込む！</span>
-    <span class="c-button__icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" class="c-button__icon-bg">
-        <path fill="#fcfcfc"
-          d="M21.544,1.815 C32.411,1.815 41.220,10.623 41.220,21.492 C41.220,32.359 32.411,41.167 21.544,41.167 C10.677,41.167 1.867,32.359 1.867,21.492 C1.867,10.623 10.677,1.815 21.544,1.815 Z" />
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" class="c-button__icon-arrow">
-        <path fill="#00bc85" d="M0.005,16.052 L0.118,0.926 L13.113,8.391 L0.005,16.052 Z" />
-      </svg>
-    </span>
-  </button>
+
+
 
   <!-- Schedule -->
   <section class="p-schedule js-parallax-trigger">
 
+    <div class="layout-padding p-schedule__padding">
+      <div class="layout-inner p-schedule__inner">
+        <!-- 内容ボックス -->
+        <div class="p-schedule__layout c-card-wrap js-fade-card js-parallax  u-relative">
+          <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
+          <h2 class="c-section-title js-parallax u-absolute-center">
+            <span class="c-section-title__text c-gradient-title js-split-text">Schedule</span>
+          </h2>
+          <div class="c-card">
 
-    <!-- 内容ボックス -->
-    <div class="p-schedule__layout c-card-wrap js-fade-card js-parallax  u-relative">
-      <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
-      <h2 class="c-section-title js-parallax u-absolute-center">
-        <span class="c-section-title__text c-gradient-title js-split-text">Schedule</span>
-      </h2>
-      <div class="c-card">
 
-        <!-- ボックス内タイトル（scheduleセクション固有） -->
-        <!-- <p class="p-schedule__subtitle js-fade-sub js-parallax">
-                <span class="p-schedule__logo">ORICTON</span>とは？
-              </p> -->
+            <!-- 共通：キャッチコピー -->
+            <p class="c-label js-fade-label js-parallax">
+              <span class="gradient-text">参加概要</span>
+            </p>
 
-        <!-- 共通：キャッチコピー -->
-        <p class="c-label js-fade-label js-parallax">
-          <span class="gradient-text">参加概要</span>
-        </p>
+            <!-- 本文 -->
+            <div class="p-schedule__text">
+              <dl>
+                <dt><span class="icon-sm">◆</span>開催日時</dt>
+                <dd>
+                  <p>2000789年6月21日（日）12:00～20:00</p>
+                  <p class="text-sm">※終了時刻が前倒しになる可能性があります。詳細は、参加者に改めてご連絡いたします。</p>
+                </dd>
 
-        <!-- 共通：サブキャッチコピー -->
-        <!-- <p class="c-lead js-fade-lead js-parallax">ここは十月ことにこういう講演心としてものの後を立ち行かまいませ。</p> -->
+                <dt><span class="icon-sm">◆</span>参加費</dt>
+                <dd>無料</dd>
 
-        <!-- 本文 -->
-        <div class="p-schedule__text">
-          <dl>
-            <dt><span class="icon-sm">◆</span>開催日時</dt>
-            <dd>
-              <p>2000789年6月21日（日）12:00～20:00</p>
-              <p class="text-sm">※終了時刻が前倒しになる可能性があります。詳細は、参加者に改めてご連絡いたします。</p>
-            </dd>
+                <dt><span class="icon-sm">◆</span>お申込み方法</dt>
+                <dd>
+                  本ページのお申込みボタンをクリックし、ORICTIONのサイトにてお申し込みください。
+                </dd>
 
-            <dt><span class="icon-sm">◆</span>参加費</dt>
-            <dd>無料</dd>
+                <dt><span class="icon-sm">◆</span>当日必要なもの</dt>
+                <dd>夢、希望、愛</dd>
+              </dl>
+            </div>
 
-            <dt><span class="icon-sm">◆</span>お申込み方法</dt>
-            <dd>
-              本ページのお申込みボタンをクリックし、ORICTIONのサイトにてお申し込みください。
-            </dd>
-
-            <dt><span class="icon-sm">◆</span>当日必要なもの</dt>
-            <dd>夢、希望、愛</dd>
-          </dl>
+          </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -435,7 +444,7 @@
               </div>
               <div class="accordion__answer">
                 <span class="accordion__a">A</span>
-                <p class="accordion__answer-text">無料でご参加いただけます。お申し込みには宇宙人化が必要です。</p>
+                <p class="accordion__answer-text">無料でご参加いただけます。<br class="br-sp-only"> お申し込みには宇宙人化が必要です。</p>
               </div>
             </li>
 
@@ -447,7 +456,7 @@
               </div>
               <div class="accordion__answer">
                 <span class="accordion__a">A</span>
-                <p class="accordion__answer-text">宇宙船にて公開しています。お申し込み後にご案内いたしますので、お待ちください。</p>
+                <p class="accordion__answer-text">宇宙船にて公開しています。<br class="br-sp-only">お申し込み後にご案内いたしますので、お待ちください。</p>
               </div>
             </li>
 

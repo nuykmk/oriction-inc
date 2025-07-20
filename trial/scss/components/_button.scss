@@ -8,24 +8,34 @@
   justify-content: flex-end;
   align-items: center;
   margin: 0 auto;
-  width: 540px;
-  // padding: 14px 24px;
-  padding: $space-40 $space-24;
-  padding-left: $space-80;
+  max-width: 540px;
+  height: 108px;
+  padding: $space-20 $space-28;
+
   @include font-button-bold;
   border-radius: $radius-pill;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: $space-88;
+  margin-bottom: $space-70;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: all 0.3s;
-  // gap: 8px;
+  @include mq(md) {
+    font-size: $fs-26;
+    margin-bottom: 60px;
+    max-width: 300px;
+    height: 65px;
+    padding: $space-24;
+  }
+  @include mq(ssm) {
+    max-width: 250px;
+    font-size: $fs-20;
+    height: 55px;
+  }
 
   &--cta {
     background: $bg-primary;
     color: $text-white;
-    // padding: $space-40 $space-24 $space-40 11.25rem;
 
     &:hover {
       filter: brightness(0.9);
@@ -57,21 +67,38 @@
     position: relative;
     width: 40px;
     height: 40px;
-    margin-left: $space-140;
+    margin-left: 108px;
+    vertical-align: middle;
+    @include mq(md) {
+      margin-left: 37px;
+    }
+    @include mq(ssm) {
+      margin-left: 24px;
+    }
   }
 
   &__icon-bg,
   &__icon-arrow {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include mq(md) {
+      width: 28px;
+      height: 28px;
+    }
   }
 
   &__icon-arrow {
-    left: 17px;
-    top: 13px;
+    top: 50%;
+    left: 52%;
     width: 14px;
     height: 17px;
+    transform: translate(-50%, -50%);
+    @include mq(md) {
+      width: 9px;
+      height: 12px;
+    }
   }
 }
 
@@ -81,6 +108,7 @@
 
 .c-page-top {
   color: $bg-default;
+
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -103,11 +131,17 @@
     display: inline-block;
     width: 66px;
     height: 66px;
+    @include mq(md) {
+      width: 56px;
+      height: 56px;
+    }
   }
 
   &__bg {
     width: 100%;
     height: 100%;
+    // border: 1px solid $border-accent;
+    // border-radius: $radius-circle;
   }
 
   &__arrow {
@@ -118,5 +152,9 @@
     transform: translate(-50%, -50%);
     width: 48px;
     height: 48px;
+    @include mq(md) {
+      width: 36px;
+      height: 36px;
+    }
   }
 }

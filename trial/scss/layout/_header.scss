@@ -7,22 +7,29 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    max-width: 920px;
   }
 
   &__cta {
     height: 38px;
-    max-width: 270px;
+    width: 270px;
     display: inline-flex;
+    justify-content: flex-end;
     align-items: center;
     background-color: $bg-primary;
     @include font($fs-18, $font-weight-bold, $lh-none);
     color: $text-white;
-    padding: $space-8 $space-12 $space-8 $space-80;
+    padding: $space-8 $space-12;
     text-decoration: none;
     transition: background-color 0.3s;
-
+    @include mq(md) {
+      max-width: 150px;
+      max-height: 30px;
+      padding-left: 15px;
+      white-space: nowrap;
+    }
     &:hover {
-      background-color: $green-700;
+      filter: brightness(0.9);
     }
 
     &-icon {
@@ -32,6 +39,10 @@
       width: 14px;
       height: 17px;
       margin-left: $space-72;
+      @include mq(md) {
+        margin-left: 18%;
+        width: 10px;
+      }
     }
   }
 }

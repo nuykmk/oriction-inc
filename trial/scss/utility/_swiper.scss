@@ -3,22 +3,22 @@
 // Merit Swiper
 // ==============================
 
+.p-merit-slider__padding {
+  padding: 0 $space-56;
+}
 .p-merit-slider__inner {
   max-width: 920px;
+  margin: 0 auto;
+  @include mq(md) {
+    max-width: 506px;
+  }
+  @include mq(sm) {
+    max-width: 90%;
+  }
 }
 .p-merit-slider {
   // セクション全体のマージン調整（必要に応じて）
   padding-top: $space-14;
-  // width: 920px;
-  // height: 700px;
-
-  // &__padding {
-  //   @include layout-padding;
-  // }
-
-  // &__inner {
-  //   @include layout-inner;
-  // }
 
   &__swiper {
     position: relative;
@@ -30,11 +30,9 @@
     background-color: $bg-accent;
     color: $text-white;
     padding: $space-44;
-
-    // レスポンシブ対応
-    // @include mq(md) {
-    //   padding: 32px;
-    // }
+    @include mq(md) {
+      padding: $space-24 $space-36;
+    }
   }
   &__slide2 {
     background-color: $bg-primary;
@@ -48,18 +46,23 @@
     align-items: center;
     gap: $space-32;
     margin-bottom: $space-40;
-
-    // @include mq(md) {
-    //   gap: 24px;
-    // }
+    @include mq(md) {
+      margin-bottom: $space-20;
+    }
+    @include mq(sm) {
+      flex-direction: column;
+    }
   }
 
   &__icon {
     width: 152px;
     height: 152px;
-    // border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
+    @include mq(md) {
+      width: 85px;
+      height: auto;
+    }
 
     img {
       width: 100%;
@@ -72,10 +75,16 @@
     display: flex;
     flex-direction: column;
     gap: $space-24;
+    @include mq(md) {
+      gap: $space-12;
+    }
   }
 
   &__name {
     @include font($fs-24);
+    @include mq(ssm) {
+      font-size: $fs-20;
+    }
   }
 
   &__meta {
@@ -86,6 +95,9 @@
     display: flex;
     flex-direction: column;
     gap: $space-32;
+    @include mq(md) {
+      gap: $space-20;
+    }
   }
 
   &__question {
@@ -93,6 +105,10 @@
     padding: $space-10 $space-20;
     @include font($fs-20, $font-weight-bold, $lh-100);
     margin-bottom: 8px;
+    @include mq(sm) {
+      line-height: $lh-medium;
+      font-weight: $font-weight-regular;
+    }
   }
 
   &__answer {
@@ -123,6 +139,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 52px 52px;
+    @include mq(md) {
+      width: 40px;
+      height: 40px;
+      background-size: 40px 40px;
+    }
 
     &.swiper-button-disabled {
       opacity: 0.3;

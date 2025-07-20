@@ -1,15 +1,15 @@
 $breakpoints: (
-  // 1000px以下のモニタで適用
-  'xl': 'screen and (max-width: 1000px)',
-  // 900px以下のモニタで適用
-  'lg': 'screen and (max-width: 900px)',
+  // 1100px以下のモニタで適用
+  'xl': 'screen and (max-width: 1100px)',
+  // 850px以下のモニタで適用
+  'lg': 'screen and (max-width: 850px)',
   // 750px以下のモニタで適用　//今回の指定ブレイクポイント
   'md': 'screen and (max-width: 750px)',
 
-  // 431px以下のモニタで適用
-  'sm': 'screen and (max-width: 431px)',
-  // 340px以下のモニタで適用
-  'ssm': 'screen and (max-width: 340px)'
+  // 592px以下のモニタで適用
+  'sm': 'screen and (max-width: 590px)',
+  // 450px以下のモニタで適用
+  'ssm': 'screen and (max-width: 465px)'
 ) !default;
 
 @mixin mq($breakpoint: md) {

@@ -7,11 +7,24 @@
   .p-faq__padding {
     margin-top: 150px;
     margin-bottom: $space-58;
+    @include mq(md) {
+      margin-top: 80px;
+    }
   }
-
+  .p-faq__inner {
+    max-width: 920px;
+    @include mq(md) {
+      max-width: 78%;
+    }
+  }
+  .c-card-wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .p-faq__content {
     box-shadow: none;
     margin-top: 0;
+    max-width: 920px;
     .p-faq__label {
       margin-bottom: 55px;
     }
@@ -24,6 +37,9 @@
 .accordion {
   width: 100%;
   @include font($fs-24, $font-weight-bold, $lh-100);
+  @include mq(md) {
+    font-size: $fs-22;
+  }
 
   &__item {
     background-color: $bg-accent; // ピンク背景
@@ -53,11 +69,15 @@
     line-height: 30px;
     margin-right: $space-18;
     flex-shrink: 0;
+    @include mq(md) {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &__question-text {
-    color: #fff;
-    font-weight: bold;
+    color: $text-white;
+    line-height: $lh-medium;
     flex: 1;
   }
 
@@ -66,6 +86,12 @@
     width: 32px;
     height: 32px;
     flex-shrink: 0;
+    margin-left: $space-18;
+
+    @include mq(md) {
+      width: 24px;
+      height: 24px;
+    }
 
     &::before,
     &::after {
@@ -81,6 +107,10 @@
       top: 50%;
       left: 0;
       transform: translateY(-50%);
+      @include mq(md) {
+        width: 24px;
+        height: 2px;
+      }
     }
 
     &::after {
@@ -89,6 +119,10 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+      @include mq(md) {
+        height: 24px;
+        width: 2px;
+      }
     }
   }
 
@@ -112,6 +146,10 @@
     line-height: 30px;
     margin-right: $space-18;
     flex-shrink: 0;
+    @include mq(md) {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &__answer-text {
@@ -122,7 +160,9 @@
   // 開いたときのスタイル
   &__item.is-open {
     .accordion__answer {
-      display: block;
+      // display: block;
+      display: flex;
+      line-height: $lh-medium;
     }
 
     .accordion__icon {

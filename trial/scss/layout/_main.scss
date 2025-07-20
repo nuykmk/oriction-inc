@@ -4,10 +4,27 @@
 // FV
 // ==============================
 .fv {
-  &__inner {
+  &__padding {
     padding: $space-32 $space-80;
-
+    @include mq(sm) {
+      padding: $space-28 $space-40;
+    }
+  }
+  &__inner {
+    max-width: 840px;
     text-align: left;
+    @include mq(lg) {
+      max-width: 750px;
+    }
+    @include mq(md) {
+      max-width: 500px;
+    }
+    @include mq(sm) {
+      max-width: 400px;
+    }
+    @include mq(ssm) {
+      max-width: 300px;
+    }
   }
   &__main-bg {
     background-image: $bg-fv;
@@ -17,15 +34,30 @@
   }
   // サブコピー群（ピンク文字）
   &__texts {
-    margin-bottom: 1.56rem;
+    margin-bottom: $space-24;
+    @include mq(md) {
+      margin-bottom: $space-18;
+    }
 
     .fv__sub,
     .fv__sub2 {
-      @include font($fs-36, $font-weight-black, $lh-default);
+      @include font($fs-36, $font-weight-black);
       color: $pink-500;
       text-align: left;
+      @include mq(md) {
+        font-size: $fs-30;
+      }
+      @include mq(sm) {
+        font-size: $fs-24;
+      }
       &-sm {
         font-size: $fs-28;
+        @include mq(md) {
+          font-size: $fs-24;
+        }
+        @include mq(sm) {
+          font-size: $fs-20;
+        }
       }
     }
   }
@@ -35,19 +67,50 @@
     @include font($fs-24, $line-height: $lh-none);
     text-align: left;
     color: $text-default;
-    margin-bottom: 4.75rem;
+    margin-bottom: $space-76;
+    @include mq(md) {
+      // font-size: 18px;
+      margin-bottom: $space-56;
+    }
+    @include mq(sm) {
+      font-size: $fs-22;
+    }
   }
 
   // タイトル
   &__title {
-    @include font($fs-56, $font-weight-black, $lh-tight);
+    @include font($fs-64, $font-weight-black, $lh-tight);
     text-align: left;
     letter-spacing: $ls-wide;
     margin-bottom: $space-80;
+    @include mq(lg) {
+      font-size: $fs-60;
+      letter-spacing: 0em;
+    }
+    @include mq(md) {
+      font-size: $fs-56;
+      margin-bottom: $space-40;
+    }
+    @include mq(sm) {
+      font-size: $fs-50;
+    }
+    @include mq(ssm) {
+      font-size: $fs-36;
+    }
 
     &-lg {
-      display: inline-block;
-      @include font($fs-72, $font-weight-black, $lh-none);
+      display: inline-flex;
+      @include font($fs-100, $font-weight-black, $lh-none);
+      letter-spacing: $ls-wide;
+      @include mq(md) {
+        font-size: $fs-90;
+      }
+      @include mq(sm) {
+        font-size: $fs-80;
+      }
+      @include mq(ssm) {
+        font-size: $fs-64;
+      }
     }
 
     .gradient-text {
@@ -60,17 +123,22 @@
       -webkit-text-stroke: 0.3px transparent;
       transform: translateZ(0);
       overflow: visible;
+      white-space: nowrap;
     }
 
     .highlight-bg {
       background-color: $bg-black;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       padding: 0 $space-4;
       overflow: visible;
       margin-bottom: $space-20;
       &:last-child {
         margin-bottom: 0;
       }
+    }
+    .adjust-dot {
+      letter-spacing: -0.3em; // ← 数値は好みに合わせて調整！
     }
   }
 
@@ -83,6 +151,13 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10.625rem;
+    @include mq(md) {
+      margin-bottom: 60px;
+    }
+    @include mq(sm) {
+      flex-direction: column;
+      padding: $space-10;
+    }
     .fv__label {
       @include font($fs-18, $font-weight-bold, $lh-none);
       border: 2px solid $border-white;
@@ -91,7 +166,11 @@
     }
 
     .fv__date {
-      @include font($fs-24, $font-weight-bold, $lh-default);
+      @include font($fs-24, $font-weight-bold);
+      letter-spacing: $ls-wide;
+      @include mq(md) {
+        font-size: 18px;
+      }
       &-sm {
         @include font($fs-18);
       }
@@ -114,12 +193,23 @@
     margin-top: $space-40;
     padding-bottom: $space-56;
     color: $text-accent;
+    @include mq(md) {
+      margin-top: $space-20;
+      padding-bottom: $space-28;
+      font-size: $fs-24;
+    }
     .p-about__logo {
       @include font($fs-36, $font-weight-black);
+      @include mq(md) {
+        font-size: $fs-32;
+      }
     }
   }
   &__label {
     @include font($fs-26!important, $font-weight-bold, $lh-100);
+    @include mq(sm) {
+      font-size: $fs-20 !important;
+    }
   }
 }
 
@@ -128,7 +218,7 @@
 // ==============================
 .p-merit {
   position: relative;
-  padding-bottom: $space-46;
+  // padding-bottom: $space-46;
   background: $bg-default;
   overflow: hidden;
   .c-text {
@@ -210,6 +300,18 @@
   color: $text-default;
 }
 
+.p-merit {
+  .c-button {
+    margin-top: $space-46;
+    margin-bottom: $space-92;
+    .c-button__icon {
+      margin-left: 35px;
+      @include mq(md) {
+        margin-left: 0;
+      }
+    }
+  }
+}
 // ==============================
 // Schedule
 // ==============================
@@ -244,11 +346,17 @@
     dd {
       @include font($fs-20, $font-weight-medium);
       margin-bottom: $space-30;
+      @include mq(md) {
+        line-height: $lh-medium;
+      }
       p + p {
         margin-top: $space-16;
       }
       .text-sm {
         @include font($fs-14, $font-weight-regular);
+        @include mq(md) {
+          line-height: $lh-medium;
+        }
       }
     }
   }

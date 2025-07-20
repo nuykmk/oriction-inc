@@ -10,6 +10,12 @@
   // margin-bottom: 60px;
   position: relative;
   z-index: $z-default;
+  @include mq(md) {
+    font-size: 100px;
+  }
+  @include mq(sm) {
+    font-size: $fs-100;
+  }
 
   .c-gradient-title {
     display: inline-block;

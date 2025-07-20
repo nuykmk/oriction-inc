@@ -17,6 +17,9 @@
     align-items: flex-end;
     height: 100%;
     height: 204px;
+    @include mq(md) {
+      height: 122px;
+    }
   }
   small {
     font-size: $fs-16;
