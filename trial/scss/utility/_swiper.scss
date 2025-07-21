@@ -17,12 +17,11 @@
   }
 }
 .p-merit-slider {
-  // セクション全体のマージン調整（必要に応じて）
   padding-top: $space-14;
 
   &__swiper {
     position: relative;
-    overflow: visible; // ←変更！
+    overflow: visible;
     max-width: 1000px;
   }
 
@@ -126,7 +125,7 @@
     justify-content: space-between;
     pointer-events: none;
     > * {
-      pointer-events: auto; // ← ボタンだけクリック可能に
+      pointer-events: auto;
     }
   }
 
@@ -144,6 +143,11 @@
       height: 40px;
       background-size: 40px 40px;
     }
+    @include mq(sm) {
+      width: 30px;
+      height: 30px;
+      background-size: 30px 30px;
+    }
 
     &.swiper-button-disabled {
       opacity: 0.3;
@@ -154,25 +158,28 @@
   &__prev {
     position: absolute;
     background-image: url('../../img/btn-arrow-prev.png');
-    left: -26px; // ←幅の半分を左へはみ出させる
+    left: -26px;
+    @include mq(md) {
+      left: -20px;
+    }
+    @include mq(sm) {
+      left: -15px;
+    }
   }
 
   &__next {
     position: absolute;
     background-image: url('../../img/btn-arrow-next.png');
-    right: -26px; // ←幅の半分を右へはみ出させる
+    right: -26px;
+    @include mq(md) {
+      right: -20px;
+    }
+    @include mq(sm) {
+      right: -15px;
+    }
   }
 }
-// Swiperの「デフォルトクラス」だけを対象にして消す
 .swiper-button-next:not(.p-merit-slider__next),
 .swiper-button-prev:not(.p-merit-slider__prev) {
   display: none !important;
 }
-// .swiper {
-//   overflow: hidden; // ← これ大事！
-// }
-
-// .swiper-slide {
-//   width: 100%; // ← 横幅を100%に
-//   flex-shrink: 0; // ← Swiperで横スクロールさせるため必須
-// }

@@ -32,7 +32,6 @@
     background-size: cover;
     background-position: top center;
   }
-  // サブコピー群（ピンク文字）
   &__texts {
     margin-bottom: $space-24;
     @include mq(md) {
@@ -69,7 +68,6 @@
     color: $text-default;
     margin-bottom: $space-76;
     @include mq(md) {
-      // font-size: 18px;
       margin-bottom: $space-56;
     }
     @include mq(sm) {
@@ -138,11 +136,10 @@
       }
     }
     .adjust-dot {
-      letter-spacing: -0.3em; // ← 数値は好みに合わせて調整！
+      letter-spacing: -0.3em;
     }
   }
 
-  // info（ラベルやTEL）
   &__info {
     background-color: $bg-accent;
     color: $text-white;
@@ -218,7 +215,6 @@
 // ==============================
 .p-merit {
   position: relative;
-  // padding-bottom: $space-46;
   background: $bg-default;
   overflow: hidden;
   .c-text {
@@ -226,11 +222,20 @@
   }
 
   .p-merit__bg {
+    height: 336px;
     background-color: $blue-700;
+    overflow: hidden;
+    @include mq(md) {
+      height: 236px;
+    }
     img {
       width: 56%;
+      height: 336px;
       margin: 0 auto;
       display: block;
+      @include mq(md) {
+        height: 236px;
+      }
 
       /* モダンブラウザ用マスク */
       -webkit-mask-image: linear-gradient(
@@ -268,27 +273,35 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  color: $text-default; // SVGのstrokeカラーに反映される
+  color: $text-default;
 }
 
 // 導入テキスト
 .p-merit-catch__sub-text {
   @include font($fs-32, $font-weight-bold);
+  @include mq(md) {
+    font-size: $fs-24;
+  }
 }
 
 // 左右のライン（2本セットでラップ）
 .p-merit-catch__lines {
   display: inline-flex;
-  // gap: 2px;
   position: relative;
   align-items: flex-end;
 
   &--left {
     align-items: flex-end;
+    @include mq(md) {
+      width: 16px;
+    }
   }
 
   &--right {
     align-items: flex-end;
+    @include mq(md) {
+      width: 16px;
+    }
   }
 }
 
@@ -318,9 +331,7 @@
 
 .p-schedule {
   position: relative;
-  // padding-bottom: $space-104;
   background: $gradient-schedule-bg;
-  // background-color: black;
   overflow: hidden;
   .p-schedule__text {
     text-align: left;
@@ -373,5 +384,4 @@
   background-color: $bg-default;
   box-shadow: 0 0 76px rgba(0, 0, 0, 0.14);
   position: relative;
-  // z-index: $z-default; // 背景との重なり制御（念のため）
 }

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>テスト用サイト</title>
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"><!-- favicon -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <!-- SEO対策 -->
   <meta name="description" content="課題用のサンプルページです。" />
   <meta name="keywords" content="" />
@@ -21,6 +21,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
+
 </head>
 
 <body>
@@ -42,7 +43,6 @@
 
   <!-- FV -->
   <section class="fv" id="fv">
-    <!-- ★ グラデ背景部分を wrap -->
     <div class="fv__main-bg">
       <div class="layout-padding fv__padding">
         <div class="layout-inner fv__inner">
@@ -57,12 +57,12 @@
           </div>
 
           <!-- 本文テキスト（単体アニメ） -->
-          <p class="fv__lead js-fade-lead">
+          <p class="fv__lead js-fade-text">
             本文テキスト1本文テキスト2！ここは本文テキストなんです3！
           </p>
 
           <!-- タイトル（単体アニメ） -->
-          <h1 class="fv__title js-fade-title">
+          <h1 class="fv__title js-fade-title js-parallax-x">
             <span class="highlight-bg"><span class="gradient-text"> <span class="fv__title-lg">サンプル</span><span
                   class="fv__title-sm">の</span> </span>
             </span><br>
@@ -110,32 +110,31 @@
 
 
         <!-- 内容ボックス -->
-        <div class="c-card-wrap js-fade-card js-parallax  u-relative">
+        <div class="c-card-wrap js-fade-card u-relative">
           <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
-          <h2 class="c-section-title js-parallax u-absolute-center">
-            <span class="c-section-title__text c-gradient-title js-split-text">About</span>
+          <h2 class="c-section-title u-absolute-center">
+            <span class="c-section-title__text c-gradient-title js-fade-title js-parallax-y">About</span>
           </h2>
           <div class="c-card">
 
             <!-- ボックス内タイトル（aboutセクション固有） -->
-            <p class="p-about__subtitle js-fade-sub js-parallax">
+            <p class="p-about__subtitle js-slide-left js-parallax-x">
               <span class="p-about__logo">ORICTON</span>とは？
             </p>
 
             <!-- 共通：キャッチコピー -->
-            <p class="p-about__label c-label js-fade-label js-parallax">
+            <p class="p-about__label c-label js-fade-sub-group js-parallax-y">
               <span class="gradient-text">テスト用サンプルコピーが入るです！</span>
             </p>
 
             <!-- 共通：サブキャッチコピー -->
-            <p class="c-lead js-fade-lead js-parallax">ここは十月ことにこういう講演心としてものの後を立ち行かまいませ。</p>
+            <p class="c-lead js-fade-text">ここは十月ことにこういう講演心としてものの後を立ち行かまいませ。</p>
 
             <!-- 本文 -->
-            <div class="c-text js-fade-text js-parallax">
+            <div class="c-text js-fade-text">
               <p>
                 多分当時が説明院はけっしてその変化でたなどがほかならとしまいないのは入会行きたないて、さっそくには解るましんでん。秋刀魚から来だ事もあたかも今よりかつてしたいん。いよいよ嘉納さんから講演目的どうお尋ねがなるた詫この理論それか発見をというご持でたましんて、いわゆるほかはこれか金力会員がいるて、木下君ののが味の私にどうぞご満足と知れて私自己にご修養が引き離すようにとうていお戦争に持っますたて、もうまあ使用に解るでしょとならです事に握っですた。
               </p>
-              <!-- <p>2段落目も必要ならここに。</p> -->
             </div>
 
           </div>
@@ -147,24 +146,26 @@
   <!-- Merit -->
   <section class="p-merit js-parallax-trigger">
     <!-- 背景画像（パララックス対象） -->
-    <div class="p-merit__bg c-section-bg js-parallax-bg">
-      <img src="img/merit-bg.webp" alt="meritイメージ" />
+    <div class="c-section-bg js-parallax-bg">
+      <div class="p-merit__bg">
+        <img src="img/merit-bg.webp" alt="meritイメージ" />
+      </div>
     </div>
     <div class="layout-padding p-merit__padding">
       <div class="layout-inner p-merit__inner">
         <!-- 内容ボックス -->
-        <div class="c-card-wrap js-fade-card js-parallax  u-relative">
+        <div class="c-card-wrap js-fade-card u-relative">
           <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
-          <h2 class="c-section-title js-parallax u-absolute-center">
-            <span class="c-section-title__text c-gradient-title js-split-text">Merit</span>
+          <h2 class="c-section-title u-absolute-center">
+            <span class="c-section-title__text c-gradient-title js-fade-title js-parallax-y">Merit</span>
           </h2>
-          <div class="c-card">
+          <div class="c-card js-fade-sub-group js-parallax-x">
             <!-- 共通：キャッチコピー -->
-            <p class="c-label js-fade-label js-parallax">
+            <p class="c-label">
               <span class="gradient-text">サンプルコピーだす！</span>
             </p>
             <!-- 本文 -->
-            <div class="c-text js-fade-text js-parallax">
+            <div class="c-text js-fade-text">
               <p>
                 包みは耳のかっこうゴーシュらへ扉で急い曲だまし。またとてもだめたですという楽長ましまし。生意気たたんたはなかっいやボロンボロンのくたくた汁のところがは時々上手じならながら、それだってあとのなるれんたで。
               </p>
@@ -174,11 +175,9 @@
           </div>
         </div>
         <!-- キャッチコピー -->
-        <div class="p-merit-catch__group js-fade-catch js-parallax">
-
+        <div class="p-merit-catch__group">
           <!-- 上部の導入キャッチ（メリットセクション専用） -->
-          <div class="p-merit-catch__sub js-fade-catch js-parallax">
-
+          <div class="p-merit-catch__sub js-flash-text js-parallax-y">
             <!-- 左：2本線（上 → 下）-->
             <span class="p-merit-catch__lines p-merit-catch__lines--left">
               <!-- 短い線 -->
@@ -192,10 +191,8 @@
                 <path d="M15.9,34.984 L2.3,2.184" stroke="currentColor" stroke-width="2" fill="none" />
               </svg>
             </span>
-
             <!-- テキスト -->
             <p class="p-merit-catch__sub-text">我々宇宙人が</p>
-
             <!-- 右：2本線（上 → 下）-->
             <span class="p-merit-catch__lines p-merit-catch__lines--right">
               <!-- 長い線 -->
@@ -212,7 +209,7 @@
           </div>
 
           <!-- 下部キャッチコピー（共通パーツ） -->
-          <p class="c-label js-fade-label js-parallax">
+          <p class="c-label js-slide-left js-parallax-x">
             <span class="gradient-text">ORICTIONなんです</span>
           </p>
         </div>
@@ -377,21 +374,21 @@
     <div class="layout-padding p-schedule__padding">
       <div class="layout-inner p-schedule__inner">
         <!-- 内容ボックス -->
-        <div class="p-schedule__layout c-card-wrap js-fade-card js-parallax  u-relative">
+        <div class="p-schedule__layout c-card-wrap js-fade-card u-relative">
           <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
-          <h2 class="c-section-title js-parallax u-absolute-center">
-            <span class="c-section-title__text c-gradient-title js-split-text">Schedule</span>
+          <h2 class="c-section-title u-absolute-center">
+            <span class="c-section-title__text c-gradient-title js-fade-title js-parallax-y">Schedule</span>
           </h2>
           <div class="c-card">
 
 
             <!-- 共通：キャッチコピー -->
-            <p class="c-label js-fade-label js-parallax">
+            <p class="c-label js-fade-sub-group js-parallax-x">
               <span class="gradient-text">参加概要</span>
             </p>
 
             <!-- 本文 -->
-            <div class="p-schedule__text">
+            <div class="p-schedule__text js-fade-text">
               <dl>
                 <dt><span class="icon-sm">◆</span>開催日時</dt>
                 <dd>
@@ -422,20 +419,20 @@
   <section class="p-faq js-parallax-trigger">
     <div class="layout-padding p-faq__padding">
       <div class="layout-inner p-faq__inner">
-        <div class="p-faq__layout p-faq__content c-card-wrap js-fade-card js-parallax  u-relative">
+        <div class="p-faq__layout p-faq__content c-card-wrap u-relative">
           <!-- セクションタイトル（共通パーツ／1文字ずつ表示＋パララックス） -->
-          <h2 class="p-faq__title c-section-title js-parallax u-absolute-center">
-            <span class="c-section-title__text c-gradient-title js-split-text">FAQ</span>
+          <h2 class="p-faq__title c-section-title u-absolute-center">
+            <span class="c-section-title__text c-gradient-title js-fade-title js-parallax-y">FAQ</span>
           </h2>
           <div class="c-card">
             <!-- 共通：キャッチコピー -->
-            <p class="c-label p-faq__label js-fade-label js-parallax">
+            <p class="c-label p-faq__label js-fade-sub-group js-parallax-x">
               <span class="gradient-text">よくあるご質問
               </span>
             </p>
           </div>
           <!-- アコーディオン -->
-          <ul class="p-faq__accordion accordion js-accordion">
+          <ul class="p-faq__accordion accordion js-fade-card js-accordion">
             <li class="accordion__item">
               <div class="accordion__question js-accordion-trigger">
                 <span class="accordion__q">Q</span>
@@ -499,20 +496,25 @@
   <footer id="footer" class="footer">
     <div class="layout-padding p-footer__padding">
       <div class="layout-inner p-footer__inner">
-        <div class="p-footer__content js-fade-card js-parallax  u-relative">
+        <div class="p-footer__content u-relative">
           <small>&copy;copyright sample</small>
         </div>
       </div>
   </footer>
 
-  <!-- 共通ライブラリ -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <!-- swiper-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- GSAP本体 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- ScrollTriggerプラグイン -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   <!-- 共通のJS（全ページで使う） -->
-  <script src="js/accordion.js"></script>
   <script src="js/swiper.js"></script>
+  <script src="js/accordion.js"></script>
+  <script src="js/gsap.js"></script>
+  <script src="js/parallax.js"></script>
   <script src="js/main.js"></script>
 </body>
 

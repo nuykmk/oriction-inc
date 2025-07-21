@@ -5,10 +5,6 @@
 $white: #ffffff;
 $black: #000000;
 
-// $gray-base: #eeeeee;
-// $gray-light: #f7f7f7;
-// $gray-dark: #aaaaaa;
-
 $red-base: #ec0000;
 $pink-base: #e16792;
 $blue-base: #504bd5;
@@ -20,7 +16,7 @@ $accent-base: #ff693b;
 // ==============================
 
 // タイトル系グラデーション
-// $gradient-title-main: linear-gradient(-135deg, #faed83, #bf70dd, #2e55c2);
+
 $gradient-title-main: linear-gradient(
   -133deg,
   #faed83 20%,
@@ -43,16 +39,6 @@ $gradient-schedule-bg: linear-gradient(to right, #ff693b, #ffb66f, #faed83);
 // Color - Variants
 // ==============================
 
-// Gray
-// $gray-100: $gray-light;
-// $gray-500: $gray-base;
-// $gray-700: $gray-dark;
-
-// Red
-// $red-100: #ffe3e3;
-// $red-500: $red-base;
-// $red-700: #a10000;
-
 // Pink
 $pink-100: #e1adbf;
 $pink-500: $pink-base;
@@ -68,39 +54,23 @@ $green-100: #e6fbad;
 $green-500: $green-base;
 $green-700: #02986b;
 
-// Accent（例：オレンジ系）
-// $accent-100: #ffebcc;
-// $accent-500: $accent-base;
-// $accent-700: #cc7a00;
-
 // ==============================
 // Semantic Colors
 // ==============================
 
 // Text
 $text-default: $black;
-// $text-sub: $gray-700;
-// $text-disabled: $gray-500;
-// $text-placeholder: $gray-700;
-// $text-link: $blue-500;
-// $text-alert: $red-500;
+
 $text-accent: $pink-500;
 $text-white: $white;
 
 // Background
 $bg-default: $white;
-// $bg-muted: $gray-100;
 $bg-primary: $green-500;
 $bg-accent: $pink-500;
-// $bg-active: #cff7e4;
-// $bg-warning: #927200;
 $bg-black: $black;
 
 // Border
-// $border-default: $gray-500;
-// $border-light: $gray-100;
-// $border-primary: $green-500;
-// $border-error: $red-500;
 $border-accent: $pink-500;
 $border-white: $white;
 $border-black: $black;

@@ -6,9 +6,9 @@ $breakpoints: (
   // 750px以下のモニタで適用　//今回の指定ブレイクポイント
   'md': 'screen and (max-width: 750px)',
 
-  // 592px以下のモニタで適用
+  // 590px以下のモニタで適用
   'sm': 'screen and (max-width: 590px)',
-  // 450px以下のモニタで適用
+  // 465px以下のモニタで適用
   'ssm': 'screen and (max-width: 465px)'
 ) !default;
 

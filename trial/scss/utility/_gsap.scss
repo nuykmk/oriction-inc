@@ -1,1 +1,9 @@
 @use '../foundation/globals' as *;
+.js-parallax-y,
+.js-parallax-x,
+.js-parallax-bg {
+  will-change: transform;
+}
+.js-slide-left {
+  will-change: transform;
+}

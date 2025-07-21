@@ -495,10 +495,18 @@ img {
   text-align: left;
 }
 .p-merit .p-merit__bg {
+  height: 336px;
   background-color: #232245;
+  overflow: hidden;
+}
+@media screen and (max-width: 750px) {
+  .p-merit .p-merit__bg {
+    height: 236px;
+  }
 }
 .p-merit .p-merit__bg img {
   width: 56%;
+  height: 336px;
   margin: 0 auto;
   display: block;
   /* モダンブラウザ用マスク */
@@ -508,6 +516,11 @@ img {
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
+}
+@media screen and (max-width: 750px) {
+  .p-merit .p-merit__bg img {
+    height: 236px;
+  }
 }
 
 .p-merit-catch__group {
@@ -530,6 +543,11 @@ img {
   font-size: 2rem;
   font-weight: 600;
 }
+@media screen and (max-width: 750px) {
+  .p-merit-catch__sub-text {
+    font-size: 1.5rem;
+  }
+}
 
 .p-merit-catch__lines {
   display: inline-flex;
@@ -539,8 +557,18 @@ img {
 .p-merit-catch__lines--left {
   align-items: flex-end;
 }
+@media screen and (max-width: 750px) {
+  .p-merit-catch__lines--left {
+    width: 16px;
+  }
+}
 .p-merit-catch__lines--right {
   align-items: flex-end;
+}
+@media screen and (max-width: 750px) {
+  .p-merit-catch__lines--right {
+    width: 16px;
+  }
 }
 
 .p-merit-catch__line {
@@ -971,6 +999,10 @@ img {
   left: 0;
   width: 100%;
   height: 336px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  pointer-events: none;
   z-index: 0;
 }
 @media screen and (max-width: 750px) {
@@ -1239,6 +1271,13 @@ img {
     background-size: 40px 40px;
   }
 }
+@media screen and (max-width: 590px) {
+  .p-merit-slider__prev, .p-merit-slider__next {
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+  }
+}
 .p-merit-slider__prev.swiper-button-disabled, .p-merit-slider__next.swiper-button-disabled {
   opacity: 0.3;
   cursor: not-allowed;
@@ -1248,13 +1287,43 @@ img {
   background-image: url("../../img/btn-arrow-prev.png");
   left: -26px;
 }
+@media screen and (max-width: 750px) {
+  .p-merit-slider__prev {
+    left: -20px;
+  }
+}
+@media screen and (max-width: 590px) {
+  .p-merit-slider__prev {
+    left: -15px;
+  }
+}
 .p-merit-slider__next {
   position: absolute;
   background-image: url("../../img/btn-arrow-next.png");
   right: -26px;
 }
+@media screen and (max-width: 750px) {
+  .p-merit-slider__next {
+    right: -20px;
+  }
+}
+@media screen and (max-width: 590px) {
+  .p-merit-slider__next {
+    right: -15px;
+  }
+}
 
 .swiper-button-next:not(.p-merit-slider__next),
 .swiper-button-prev:not(.p-merit-slider__prev) {
   display: none !important;
+}
+
+.js-parallax-y,
+.js-parallax-x,
+.js-parallax-bg {
+  will-change: transform;
+}
+
+.js-slide-left {
+  will-change: transform;
 }/*# sourceMappingURL=style.css.map */

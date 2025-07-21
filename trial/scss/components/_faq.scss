@@ -42,7 +42,7 @@
   }
 
   &__item {
-    background-color: $bg-accent; // ピンク背景
+    background-color: $bg-accent;
     margin-bottom: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -160,7 +160,6 @@
   // 開いたときのスタイル
   &__item.is-open {
     .accordion__answer {
-      // display: block;
       display: flex;
       line-height: $lh-medium;
     }

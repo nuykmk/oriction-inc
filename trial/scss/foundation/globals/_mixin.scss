@@ -43,10 +43,7 @@
 }
 
 @mixin font-caption {
-  @include font(
-    $fs-12,
-    $font-weight-regular
-  ); // ← 小さくて軽くしたいときのみ個別指定
+  @include font($fs-12, $font-weight-regular);
 }
 
 // Button Text
@@ -55,5 +52,5 @@
 }
 
 @mixin font-button-bold {
-  @include font($fs-32, $font-weight-bold, $lh-none); // ← 強調ボタン
+  @include font($fs-32, $font-weight-bold, $lh-none);
 }

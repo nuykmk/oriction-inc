@@ -1,8 +1,6 @@
 @use '../globals' as *;
 
 html {
-  // font-size: 62.5%; /* 1rem = 10px廃止 */
-  // 1rem = 16px で方針統一
   overflow-x: hidden;
   scroll-behavior: smooth;
   @include mq(md) {
@@ -19,7 +17,7 @@ body {
   margin: 0 auto;
   padding: 0;
   @include mq(md) {
-    line-height: $lh-medium; // ← テキストの詰まり具合を調整
+    line-height: $lh-medium;
     font-weight: $font-weight-regular;
   }
 }

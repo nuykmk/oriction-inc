@@ -9,7 +9,7 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".p-merit-slider__prev",
   },
   autoplay: {
-    delay: 400000,
+    delay: 4000,
     disableOnInteraction: false,
   },
   allowTouchMove: true,
